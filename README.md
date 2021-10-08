@@ -1,7 +1,8 @@
-<h1 align="center"><strong>CSIS 3175 section 3 Project</strong></h1>
+<p align="center"><img src="https://developer.android.com/images/logos/android.svg"></img></p>
+<h1 align="center"><strong>CSIS 3175-003 Project</strong></h1>
 <h5 align="center"><strong>Beware, this is a living document and it will be continuously updated!!! 🚀</strong></h5>
-
 <br/>
+
 <blockquote>
   <br/>
   <h2><strong>"Documentation is a love letter that you write to your future self." - Damian Conway</strong></h2>
@@ -12,34 +13,20 @@
 <!-- <h2>🎯 <strong>Table of Contents</strong></h2>
 <br/> -->
 
+
 <h2>🎯 <strong>Objectives</strong></h2>
 <p>
   This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
-  <br/><br/>
-  
-<!-- Our Philosophy:
-
-  <ul style="list-style:square">
-    <li>S.O.L.I.D Principles</li>    
-    <li>Microservices</li>
-    <li>Serverless</li>
-    <li>Domain Driven Design</li>
-    <li>Component Driven UI</li>    
-  </ul>
-  <br/>
-
-Technologies:
-
-  <ul style="list-style:square">
-    <li>Next.js | React.js with Typescript</li>        
-    <li>FaunaDB | DynamoDB</li>
-    <li>Prismic | Strapi</li>
-    <li>Stripe</li>
-    <li>AWS</li>    
-  </ul>
 </p>
 <br/>
- -->
+
+<h2>🎯 <strong>Objectives</strong></h2>
+<p>
+  This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
+</p>
+<br/>
+
+
   
 <h2>⚓️ <strong>Navigating Throughout The Documentation</strong></h2>
 <p>The repository contains files with the <strong>.md</strong> extension. Those files may contain an overview of a feature or even a side note.</p>
