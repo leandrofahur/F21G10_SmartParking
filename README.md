@@ -18,21 +18,16 @@
   This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
 </p>
 <br/>
-  
+
 <h2>⚓️ <strong>Navigating Throughout The Documentation</strong></h2>
 <p>The repository contains files with the <strong>.md</strong> extension. Those files may contain an overview of a feature or even a side note.</p>
 <br/>
 
-<!-- <h2>💻 <strong>Next.js</strong></h2>
-<p><img src="./assets/Nextjs_SPA.png"></p>
-<p><img src="./assets/Nextjs_SSR.png"></p>
-<p><img src="./assets/Nextjs_SSG.png"></p>
+<h2>🔍 <strong>Requirements</strong></h2>
 <br/>
- -->
-<!-- <h2>🔍 <strong>Requirements</strong></h2>
-<p>👉 Backend specifications: please check the server folder</p>
-<p>👉 Frontend specifications: will be accessible when the client folder is ac\</p>
-<br/> -->
+
+<h2>🏗 <strong>Features List</strong></h2>
+<br/>
 
 <h2>👥 <strong>Contributors</strong></h2>
 <br/>
