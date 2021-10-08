@@ -13,20 +13,11 @@
 <!-- <h2>🎯 <strong>Table of Contents</strong></h2>
 <br/> -->
 
-
 <h2>🎯 <strong>Objectives</strong></h2>
 <p>
   This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
 </p>
 <br/>
-
-<h2>🎯 <strong>Objectives</strong></h2>
-<p>
-  This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
-</p>
-<br/>
-
-
   
 <h2>⚓️ <strong>Navigating Throughout The Documentation</strong></h2>
 <p>The repository contains files with the <strong>.md</strong> extension. Those files may contain an overview of a feature or even a side note.</p>
@@ -44,19 +35,11 @@
 <br/> -->
 
 <h2>👥 <strong>Contributors</strong></h2>
-<ul style="list-style:square">  
-  <li>
-    <a href="https://github.com/HRBarros">Henrique Barros - 300325470</a>
-  </li>
-  <li>
-    <a href="https://github.com/leandrofahur">Leandro Machado - 300326045</a>
-  </li>
-    <li>
-      <a href="https://github.com/marimagalhaesl">Mariana Magalhães - 300330330</a>
-  </li>
-</ul>
 <br/>
-
+<p style="display: flex; align-items: center; padding-bottom: 20px"><img src="./assets/henrique.png" height="40px" width="40px" style="border-radius: 50%"> <a style="padding-left: 20px" href="https://github.com/HRBarros">Henrique Barros - 300325470</a></p>
+<p style="display: flex; align-items: center; padding-bottom: 20px"><img src="./assets/leandro.png" height="40px" width="40px" style="border-radius: 50%"> <a style="padding-left: 20px" href="https://github.com/leandrofahur">Leandro Machado - 300326045</a></p>
+<p style="display: flex; align-items: center; padding-bottom: 20px"><img src="./assets/mariana.png" height="40px" width="40px" style="border-radius: 50%"> <a style="padding-left: 20px" href="https://github.com/marimagalhaesl">Mariana Magalhães - 300330330</a></p>
+<br/>
 
 <h2>📝 <strong>References</strong></h2>
 <ol>  
