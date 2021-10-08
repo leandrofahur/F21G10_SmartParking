@@ -56,6 +56,21 @@ Technologies:
 <p>👉 Frontend specifications: will be accessible when the client folder is ac\</p>
 <br/> -->
 
+<h2>👥 <strong>Contributors</strong></h2>
+<ul style="list-style:square">  
+  <li>
+    <a href="https://github.com/HRBarros">Henrique Barros - 300325470</a>
+  </li>
+  <li>
+    <a href="https://github.com/leandrofahur">Leandro Machado - 300326045</a>
+  </li>
+    <li>
+      <a href="https://github.com/marimagalhaesl">Mariana Magalhães - 300330330</a>
+  </li>
+</ul>
+<br/>
+
+
 <h2>📝 <strong>References</strong></h2>
 <ol>  
   <li>
