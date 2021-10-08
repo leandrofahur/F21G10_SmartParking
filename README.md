@@ -1,4 +1,4 @@
-<h1 align="center"><strong>CSIS 3175 section 003 Project</strong></h1>
+<h1 align="center"><strong>CSIS 3175 section 3 Project</strong></h1>
 <h5 align="center"><strong>Beware, this is a living document and it will be continuously updated!!! 🚀</strong></h5>
 
 <br/>
