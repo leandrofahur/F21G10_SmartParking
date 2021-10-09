@@ -15,7 +15,7 @@
 
 <h2>🎯 <strong>Objectives</strong></h2>
 <p>
-  This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. 
+  This repository comprise an <strong>Android Application</strong> that exploit several concepts learned in class. The proposed project is a <strong>Smart Parking</strong> system that provide features such as booking parking spots, payment, cancelation, feedback and others. 
 </p>
 <br/>
 
@@ -24,9 +24,53 @@
 <br/>
 
 <h2>🔍 <strong>Requirements</strong></h2>
+  <a href="./assets/guidelines.pdf" target="_blank">Project specifications and requirements</a>
 <br/>
 
 <h2>🏗 <strong>Features List</strong></h2>
+  <p>
+    <strong><u>Users</u></strong>
+    <ul>  
+      <li>
+        Sign up
+      </li>
+      <li>
+        Sign in
+      </li>
+      <li>
+        Profile
+      </li>
+      <li>
+        Book parking
+      </li>
+      <li>
+        Cancel booking
+      </li>
+      <li>
+        Invoice
+      </li>
+      <li>
+        Feedback
+      </li>      
+    </ul>
+  </p>
+  <p>
+    <strong><u>Admin</u></strong>
+    <ul>  
+      <li>
+        Admin dashboard
+      </li>
+      <li>
+        Check bookings
+      </li>
+      <li>
+        View user data (E.g., name, car, and license plate)
+      </li>
+      <li>
+        Profit (E.g., daily, weekly and montly)
+      </li>
+    </ul>
+  </p>
 <br/>
 
 <h2>👥 <strong>Contributors</strong></h2>
