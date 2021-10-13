@@ -38,6 +38,10 @@
         Sign in
       </li>
       <li>
+        Subscription
+      </li>
+
+      <li>
         Profile
       </li>
       <li>
