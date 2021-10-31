@@ -25,6 +25,9 @@
 
 <h2>🔍 <strong>Requirements</strong></h2>
   <a href="./assets/guidelines.pdf" target="_blank">Project specifications and requirements</a>
+  <br/>
+  <br/>
+  <p align="center"><img src="./assets/project_configurations.png" width="100%"></p>
 <br/>
 <br/>
 
