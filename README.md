@@ -147,6 +147,19 @@ and then
 $ git merge <branch_name>
 ```
 
+
+<strong>Delete branch locally</strong>
+
+```javascript
+$ git branch -d localBranchName
+```
+
+<strong>Delete branch remotely</strong>
+
+```javascript
+$ git push origin --delete remoteBranchName
+```
+
 More about can be found in the link on the references section.
 
 <br/>
