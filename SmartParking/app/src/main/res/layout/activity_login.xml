@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
@@ -12,13 +11,13 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
+      android:drawableRight="@drawable/ic_car"
+      android:drawablePadding="21dp"
       android:gravity="center_vertical"
       android:text="SMART PARKING"
-      android:textSize="32dp"
-      android:drawableRight="@drawable/ic_car"
       android:textColor="@color/gray_800"
+      android:textSize="32dp"
       android:textStyle="bold"
-      android:drawablePadding="21dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +28,6 @@
       android:id="@+id/imageViewLoginParkingLot"
       android:layout_width="300dp"
       android:layout_height="300dp"
-      android:layout_marginTop="16dp"
       android:src="@drawable/login_parking_lot"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -37,35 +35,42 @@
       app:layout_constraintTop_toBottomOf="@+id/textViewLoginTitle"
       app:layout_constraintVertical_bias="0.0" />
 
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/textViewLayoutUsernameEmail"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="300dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      app:boxBackgroundColor="@color/white"
-      app:boxStrokeColor="@color/gray_500"
-      app:endIconMode="clear_text"
-      app:hintTextColor="@color/gray_800"
-      app:layout_constraintBottom_toBottomOf="parent"
+  <LinearLayout
+      android:id="@+id/linearLayoutLogin"
+      android:layout_width="0dp"
+      android:layout_height="200dp"
+      android:gravity="center_horizontal"
+      android:orientation="vertical"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageViewLoginParkingLot"
-      app:layout_constraintVertical_bias="0.0"
-      app:startIconDrawable="@drawable/ic_user">
+      app:layout_constraintTop_toBottomOf="@+id/imageViewLoginParkingLot">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textViewUsernameEmail"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textViewLayoutUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Username/Email" />
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/gray_500"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/gray_800"
+        app:startIconDrawable="@drawable/ic_user">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/textViewUsernameEmail"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:hint="Username" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textViewLayoutPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:boxBackgroundColor="@color/white"
         app:boxStrokeColor="@color/gray_500"
         app:endIconMode="password_toggle"
@@ -76,22 +81,53 @@
           android:id="@+id/textViewPassword"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
           android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
-  </com.google.android.material.textfield.TextInputLayout>
 
-  <Button
-      android:id="@+id/buttonLogin"
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="184dp"
+        android:backgroundTint="@color/yellow_500"
+        android:text="Login"
+        android:textColor="@color/gray_800" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayoutSignIn"
       android:layout_width="300dp"
-      android:layout_height="60dp"
-      android:layout_marginTop="8dp"
-      android:text="Login"
-      android:textColor="@color/gray_800"
-      android:backgroundTint="@color/yellow_500"
+      android:layout_height="30dp"
+      android:orientation="horizontal"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textViewLayoutUsernameEmail"
-      app:layout_constraintVertical_bias="0.143" />
+      app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogin"
+      app:layout_constraintVertical_bias="0.0">
+
+    <TextView
+        android:id="@+id/textViewCallForSignUp"
+        android:layout_width="13dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:gravity="center_horizontal|left|center_vertical"
+        android:text="Not a member yet? Sign up"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCallSignUpIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:backgroundTint="@color/Transparent"
+        android:gravity="center_horizontal|left|center_vertical"
+        android:text="here"
+        android:textColor="@color/blue_500"
+        android:textStyle="bold" />
+  </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

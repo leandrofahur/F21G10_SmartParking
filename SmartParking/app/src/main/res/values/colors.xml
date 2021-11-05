@@ -12,4 +12,6 @@
     <color name="gray_200">#EDF2F7</color>
     <color name="yellow_500">#F5D21F</color>
     <color name="red_500">#FF0000</color>
+    <color name="blue_500">#4299E1</color>
+    <color name="Transparent">#00000000</color>
 </resources>
