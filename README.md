@@ -31,7 +31,7 @@
 <br/>
 <br/>
 
-<h2>🏗 <strong>Features List</strong></h2>
+<h2>🏗 <strong>Features List & UI/UX</strong></h2>
   <p>
     <strong><u>Users</u></strong>
     <ul>  
@@ -78,6 +78,7 @@
       </li>
     </ul>
   </p>
+   <p align="center"><img src="./assets/ui-ux.png" width="100%"></p>
 <br/>
 
 <h2>👥 <strong>Contributors</strong></h2>
@@ -146,7 +147,6 @@ and then
 ```javascript
 $ git merge <branch_name>
 ```
-
 
 <strong>Delete branch locally</strong>
 
