@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Entity(tableName = "users")
 
-public class User extends Serializable {
+public class User implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -55,6 +55,11 @@ public class User extends Serializable {
     }
 
     public void setPassword(String password) {
+        Password = password;
+    }
+
+    public User(String userName, String password) {
+        UserName = userName;
         Password = password;
     }
 
