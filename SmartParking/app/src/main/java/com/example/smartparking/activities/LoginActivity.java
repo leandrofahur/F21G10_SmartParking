@@ -1,6 +1,7 @@
 package com.example.smartparking.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.graphics.Paint;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
+import com.example.smartparking.interfaces.UserDAO;
+import com.example.smartparking.model.User;
+import com.example.smartparking.model.UserDatabase;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +22,9 @@ public class LoginActivity extends AppCompatActivity {
     // Params from the UI:
     // private TextView textViewLoginTitle;
     // private ImageView imageViewLoginParkingLot;
+
+    UserDAO db;
+    UserDatabase dataBase;
 
     private TextInputLayout textViewLayoutUsername;
     private TextInputLayout textViewLayoutPassword;
@@ -36,25 +43,30 @@ public class LoginActivity extends AppCompatActivity {
 
         textViewCallSignUpIntent.setPaintFlags(textViewCallSignUpIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
-        // route the user for the signup activity:
-        textViewCallSignUpIntent.setOnClickListener((View view) -> {
-            Intent signupIntent = new Intent(LoginActivity.this, SignupActivity.class);
-            startActivity(signupIntent);
-        });
+        dataBase = Room.databaseBuilder(getApplicationContext(), UserDatabase.class, "users.db").allowMainThreadQueries().build();
+        db = dataBase.getUserDAO();
 
         // check database and route the user, if valid, to the user activity:
         buttonLogin.setOnClickListener((View view) -> {
             String username = textViewLayoutUsername.getEditText().getText().toString();
             String password = textViewLayoutPassword.getEditText().getText().toString();
 
-            if(username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
-                return;
+            User user = db.getUser(username, password);
+
+            if(user != null) {
+                Intent userIntent = new Intent (LoginActivity.this, UserActivity.class);
+                userIntent.putExtra("User", user);
+                startActivity(userIntent);
+                finish();
+            } else {
+                Toast.makeText(this, "User not registered or Invalid credentials", Toast.LENGTH_SHORT).show();
             }
+        });
 
-
-            Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
-            startActivity(userIntent);
+        // route the user for the signup activity:
+        textViewCallSignUpIntent.setOnClickListener((View view) -> {
+            Intent signupIntent = new Intent(LoginActivity.this, SignupActivity.class);
+            startActivity(signupIntent);
         });
     }
 }
