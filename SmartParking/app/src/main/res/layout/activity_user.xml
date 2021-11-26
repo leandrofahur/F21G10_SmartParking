@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.UserActivity"
-     >
+    tools:context=".activities.UserActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +23,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txtViewNameClient"
+            android:id="@+id/txtViewNameUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
