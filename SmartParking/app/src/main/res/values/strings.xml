@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmartParking</string>
+    <string name="txtTitleUser">User</string>
+    <string name="btnTest">Button</string>
 </resources>
