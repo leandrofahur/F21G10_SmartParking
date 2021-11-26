@@ -10,26 +10,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtViewWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_weight="0.8"
-            android:text="TextView" />
+            android:gravity="center_horizontal"
+            android:text="@string/txtViewWelcome"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtViewNameClient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_weight="0.2"
-            android:text="TextView" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <GridView
+        android:id="@+id/gridViewParkingLot"
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:gravity="center"
@@ -37,43 +42,61 @@
         android:stretchMode="columnWidth" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtViewSelectCategory"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="TextView" />
+        android:gravity="center"
+        android:text="@string/txtViewCategory" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton9"
+            android:id="@+id/imgBtnCars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            app:srcCompat="@drawable/ic_car" />
+            android:contentDescription="@string/btnImageCars"
+            app:srcCompat="@drawable/ic_car"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/imgBtnBike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            app:srcCompat="@drawable/ic_car" />
+            android:contentDescription="@string/btnImageBike"
+            app:srcCompat="@drawable/ic_car"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
+            android:id="@+id/imgBtnVan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            app:srcCompat="@drawable/ic_car" />
+            android:contentDescription="@string/btnImageVan"
+            app:srcCompat="@drawable/ic_car"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/imgBtnDisabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            app:srcCompat="@drawable/ic_car" />
+            android:contentDescription="@string/btnImageDisabled"
+            app:srcCompat="@drawable/ic_car"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/yellow_500"
+        android:text="@string/btnSubmit"
+        android:textColor="#455A64" />
 
 </LinearLayout>
