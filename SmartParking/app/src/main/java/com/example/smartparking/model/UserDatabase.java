@@ -8,6 +8,5 @@ import com.example.smartparking.interfaces.UserDAO;
 @Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class UserDatabase extends RoomDatabase {
 
-    public abstract UserDAO getUserDAO();
-
+    public abstract UserDAO userDAO();
 }

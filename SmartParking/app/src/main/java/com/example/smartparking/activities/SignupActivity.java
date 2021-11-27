@@ -15,7 +15,6 @@ import com.example.smartparking.R;
 import com.example.smartparking.interfaces.UserDAO;
 import com.example.smartparking.model.User;
 import com.example.smartparking.model.UserDatabase;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -45,7 +44,7 @@ public class SignupActivity extends AppCompatActivity {
             startActivity(signInIntent);
         });
 
-        userDAO = Room.databaseBuilder(this, UserDatabase.class, "users.db").allowMainThreadQueries().build().getUserDAO();
+        userDAO = Room.databaseBuilder(this, UserDatabase.class, "users.db").allowMainThreadQueries().build().userDAO();
 
         // check database and route the user, if valid, to the user activity:
         buttonSignup.setOnClickListener((View view) -> {
@@ -58,7 +57,7 @@ public class SignupActivity extends AppCompatActivity {
                 userDAO.insertUser(user);
                 Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
                 startActivity(returnToSignIn);
-                return;
+                finish();
             } else if (username.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
             } else {

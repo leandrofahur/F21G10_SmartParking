@@ -11,8 +11,8 @@ import com.example.smartparking.model.User;
 @Dao
 public interface UserDAO {
 
-    @Query("SELECT * FROM users WHERE email = :Email and password = :Password")
-    User getUser(String Email, String Password);
+    @Query("SELECT * FROM users WHERE username = :UserName and password = :Password")
+    User getUser(String UserName, String Password);
 
     @Insert(onConflict = IGNORE)
     void insertUser(User user);
