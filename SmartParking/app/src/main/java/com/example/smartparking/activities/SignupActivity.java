@@ -19,9 +19,9 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private TextInputLayout textViewUsernameEmail2;
-    private TextInputLayout textViewPassword;
-    private TextInputLayout textViewConfirmPassword;
+    private TextView textViewUsernameEmail2;
+    private TextView textViewPassword;
+    private TextView textViewConfirmPassword;
     private TextView textViewCallSignInIntent;
     private Button buttonSignup;
     private UserDAO userDAO;
@@ -49,15 +49,16 @@ public class SignupActivity extends AppCompatActivity {
 
         // check database and route the user, if valid, to the user activity:
         buttonSignup.setOnClickListener((View view) -> {
-            String username = textViewUsernameEmail2.getEditText().getText().toString();
-            String password = textViewPassword.getEditText().getText().toString();
-            String passwordConf = textViewConfirmPassword.getEditText().getText().toString();
+            String username = textViewUsernameEmail2.getText().toString();
+            String password = textViewPassword.getText().toString();
+            String passwordConf = textViewConfirmPassword.getText().toString();
 
             if (password.equals(passwordConf)) {
                 User user = new User(username,password);
                 userDAO.insertUser(user);
                 Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
                 startActivity(returnToSignIn);
+                return;
             } else if (username.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
             } else {
