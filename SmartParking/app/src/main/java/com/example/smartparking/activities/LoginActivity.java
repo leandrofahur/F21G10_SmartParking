@@ -30,8 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     UserDAO userDAO;
     UserDatabase db;
 
-    private TextInputLayout textViewLayoutUsername;
-    private TextInputLayout textViewLayoutPassword;
+    private TextView textViewLayoutUsername;
+    private TextView textViewLayoutPassword;
     private Button buttonLogin;
     private TextView textViewCallSignUpIntent;
 
@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
             ExecutorService executorService = Executors.newSingleThreadExecutor();
             executorService.execute(() -> {
                 try {
-                    String username = textViewLayoutUsername.getEditText().getText().toString();
-                    String password = textViewLayoutPassword.getEditText().getText().toString();
+                    String username = textViewLayoutUsername.getText().toString();
+                    String password = textViewLayoutPassword.getText().toString();
 
                     userDAO = db.userDAO();
                     User user = userDAO.getUser(username, password);
