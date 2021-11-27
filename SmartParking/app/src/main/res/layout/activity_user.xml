@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageCars"
-                app:srcCompat="@drawable/ic_car"
+                app:srcCompat="@drawable/car"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
             <ImageButton
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageBike"
-                app:srcCompat="@drawable/ic_car"
+                app:srcCompat="@drawable/bike"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageVan"
-                app:srcCompat="@drawable/ic_car"
+                app:srcCompat="@drawable/van"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageDisabled"
-                app:srcCompat="@drawable/ic_car"
+                app:srcCompat="@drawable/disabled"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
