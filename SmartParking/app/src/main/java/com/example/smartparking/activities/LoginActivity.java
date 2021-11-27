@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
         textViewCallSignUpIntent.setPaintFlags(textViewCallSignUpIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
-        db = Room.databaseBuilder(getApplicationContext(), SmartParkingDB.class, "smart_parking.db").allowMainThreadQueries().build();
+        db = Room.databaseBuilder(getApplicationContext(), SmartParkingDB.class, "users.db").allowMainThreadQueries().build();
 
         // check database and route the user, if valid, to the user activity:
         buttonLogin.setOnClickListener((View view) -> {
