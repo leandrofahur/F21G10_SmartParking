@@ -2,6 +2,7 @@ package com.example.smartparking.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +55,14 @@ public class UserActivity extends AppCompatActivity {
         disabledImgBtn = findViewById(R.id.imgBtnDisabled);
         submitBtn = findViewById(R.id.btnSubmit);
 
+        StatusImagesAdapter statusImagesAdapter = new StatusImagesAdapter(StatusList);
+        parkingLotGridView.setAdapter(statusImagesAdapter);
+        parkingLotGridView.setNumColumns(2);
+
+
+        //on click listener for cars changing between free and selected
+
+        //on click listener for type of vehicle
 
     }
 
