@@ -12,9 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
-import com.example.smartparking.interfaces.UserDAO;
+import com.example.smartparking.database.SmartParkingDB;
+import com.example.smartparking.dao.UserDAO;
 import com.example.smartparking.model.User;
-import com.example.smartparking.model.UserDatabase;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -23,6 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     private TextView textViewConfirmPassword;
     private TextView textViewCallSignInIntent;
     private Button buttonSignup;
+
     private UserDAO userDAO;
 
     @Override
@@ -44,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
             startActivity(signInIntent);
         });
 
-        userDAO = Room.databaseBuilder(this, UserDatabase.class, "users.db").allowMainThreadQueries().build().userDAO();
+        userDAO = Room.databaseBuilder(this, SmartParkingDB.class, "users.db").allowMainThreadQueries().build().userDAO();
 
         // check database and route the user, if valid, to the user activity:
         buttonSignup.setOnClickListener((View view) -> {

@@ -1,4 +1,4 @@
-package com.example.smartparking.interfaces;
+package com.example.smartparking.dao;
 
 import static androidx.room.OnConflictStrategy.IGNORE;
 
