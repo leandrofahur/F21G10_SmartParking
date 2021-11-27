@@ -26,8 +26,8 @@ public class LoginActivity extends AppCompatActivity {
     UserDAO db;
     UserDatabase dataBase;
 
-    private TextInputLayout textViewLayoutUsername;
-    private TextInputLayout textViewLayoutPassword;
+    private TextView textViewLayoutUsername;
+    private TextView textViewLayoutPassword;
     private Button buttonLogin;
     private TextView textViewCallSignUpIntent;
 
@@ -48,8 +48,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // check database and route the user, if valid, to the user activity:
         buttonLogin.setOnClickListener((View view) -> {
-            String username = textViewLayoutUsername.getEditText().getText().toString();
-            String password = textViewLayoutPassword.getEditText().getText().toString();
+            String username = textViewLayoutUsername.getText().toString();
+            String password = textViewLayoutPassword.getText().toString();
 
             User user = db.getUser(username, password);
 
