@@ -38,6 +38,8 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
+        AddDataList();
+
         welcomeTxtView = findViewById(R.id.txtViewWelcome);
         userNameTextView = findViewById(R.id.txtViewNameUser); //get username from input on login to set text in user name textview
 
@@ -56,13 +58,13 @@ public class UserActivity extends AppCompatActivity {
     }
 
     private void AddDataList() {
-        StatusList.add(new ClientStatusImage(01, "ParkedCar", R.drawable.parkedcar));
-        StatusList.add(new ClientStatusImage(02, "Selected", R.drawable.selected));
-        StatusList.add(new ClientStatusImage(03, "Free", R.drawable.free));
-        StatusList.add(new ClientStatusImage(04, "Booked", R.drawable.booked));
-        StatusList.add(new ClientStatusImage(05, "Car", R.drawable.car));
-        StatusList.add(new ClientStatusImage(06, "Bike", R.drawable.bike));
-        StatusList.add(new ClientStatusImage(07, "Van", R.drawable.van));
-        StatusList.add(new ClientStatusImage(08, "Disabled", R.drawable.disabled));
+        StatusList.add(new ClientStatusImage(1, "ParkedCar", R.drawable.parkedcar));
+        StatusList.add(new ClientStatusImage(2, "Selected", R.drawable.selected));
+        StatusList.add(new ClientStatusImage(3, "Free", R.drawable.free));
+        StatusList.add(new ClientStatusImage(4, "Booked", R.drawable.booked));
+        StatusList.add(new ClientStatusImage(5, "Car", R.drawable.car));
+        StatusList.add(new ClientStatusImage(6, "Bike", R.drawable.bike));
+        StatusList.add(new ClientStatusImage(7, "Van", R.drawable.van));
+        StatusList.add(new ClientStatusImage(8, "Disabled", R.drawable.disabled));
     }
 }
