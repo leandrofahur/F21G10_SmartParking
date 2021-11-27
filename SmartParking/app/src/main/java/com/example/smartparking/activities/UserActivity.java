@@ -12,7 +12,12 @@ import android.widget.TextView;
 import com.example.smartparking.R;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserActivity extends AppCompatActivity {
+
+    List<ClientStatusImage> StatusList = new ArrayList<>(); //empty list
 
     private TextView welcomeTxtView;
     private TextView userNameTextView;
@@ -24,6 +29,8 @@ public class UserActivity extends AppCompatActivity {
     private ImageButton vanImgBtn;
     private ImageButton disabledImgBtn;
     private Button submitBtn;
+
+    private int clickedItemInd = -1;
 
 
     @Override
@@ -44,6 +51,18 @@ public class UserActivity extends AppCompatActivity {
         vanImgBtn = findViewById(R.id.imgBtnVan);
         disabledImgBtn = findViewById(R.id.imgBtnDisabled);
         submitBtn = findViewById(R.id.btnSubmit);
+
+
     }
 
+    private void AddDataList() {
+        StatusList.add(new ClientStatusImage(01, "ParkedCar", R.drawable.parkedcar));
+        StatusList.add(new ClientStatusImage(02, "Selected", R.drawable.selected));
+        StatusList.add(new ClientStatusImage(03, "Free", R.drawable.free));
+        StatusList.add(new ClientStatusImage(04, "Booked", R.drawable.booked));
+        StatusList.add(new ClientStatusImage(05, "Car", R.drawable.car));
+        StatusList.add(new ClientStatusImage(06, "Bike", R.drawable.bike));
+        StatusList.add(new ClientStatusImage(07, "Van", R.drawable.van));
+        StatusList.add(new ClientStatusImage(08, "Disabled", R.drawable.disabled));
+    }
 }
