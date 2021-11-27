@@ -13,8 +13,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public abstract class SmartParkingDB  extends RoomDatabase {
-    public abstract UserDAO getUserDAO();
+    public abstract UserDAO userDAO();
 
+    /*
+     * TODO: Review implementation for SIngleton pattern:
     // Implementation for the Singleton pattern. (This db instance is going to be running in a background thread)
     private static final int NUMBER_OF_THREADS = 4;
     private static volatile SmartParkingDB INSTANCE;
@@ -32,5 +34,6 @@ public abstract class SmartParkingDB  extends RoomDatabase {
         }
         return INSTANCE;
     }
+     */
 }
 
