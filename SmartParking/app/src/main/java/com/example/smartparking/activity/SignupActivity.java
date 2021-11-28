@@ -1,4 +1,4 @@
-package com.example.smartparking.activities;
+package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
-import com.example.smartparking.database.SmartParkingDB;
+import com.example.smartparking.database.SmartParkingRoomDB;
 import com.example.smartparking.dao.UserDAO;
 import com.example.smartparking.model.User;
 
@@ -26,8 +26,6 @@ public class SignupActivity extends AppCompatActivity {
     private TextView textViewConfirmPassword;
     private TextView textViewCallSignInIntent;
     private Button buttonSignup;
-
-    UserDAO userDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +46,7 @@ public class SignupActivity extends AppCompatActivity {
             startActivity(signInIntent);
         });
 
-        userDAO = Room.databaseBuilder(this, SmartParkingDB.class, "users.db").allowMainThreadQueries().build().userDAO();
+        //userDAO = Room.databaseBuilder(this, SmartParkingDB.class, "users.db").allowMainThreadQueries().build().userDAO();
 
         // check database and route the user, if valid, to the user activity:
         buttonSignup.setOnClickListener((View view) -> {
@@ -59,17 +57,17 @@ public class SignupActivity extends AppCompatActivity {
                     String password = textViewPassword.getText().toString();
                     String passwordConf = textViewConfirmPassword.getText().toString();
 
-                    if (password.equals(passwordConf)) {
-                        User user = new User(username,password);
-                        userDAO.insertUser(user);
-                        Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
-                        startActivity(returnToSignIn);
-                        finish();
-                    } else if (username.isEmpty() || password.isEmpty()){
-                        Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show();
-                    }
+                    //if (password.equals(passwordConf)) {
+                    //    User user = new User(username,password);
+                    //    userDAO.insertUser(user);
+                    //    Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
+                    //    startActivity(returnToSignIn);
+                    //    finish();
+                    //} else if (username.isEmpty() || password.isEmpty()){
+                    //    Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
+                    //} else {
+                    //    Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show();
+                    //}
                 } catch (Exception ex) {
                     Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
                 }
