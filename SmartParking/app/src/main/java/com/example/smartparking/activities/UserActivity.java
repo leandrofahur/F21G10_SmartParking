@@ -2,6 +2,7 @@ package com.example.smartparking.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -73,9 +74,12 @@ public class UserActivity extends AppCompatActivity {
         });
 
         //on click listener for cars changing between free and selected
-        //free-selected only once, if another one is clicked change previous back to free
-        //padding adjustment (top & bottom)
-
+        //free-selected only once, if another one is clicked change previous clicked back to free
+        //border adjustment (top & bottom)
+        GridView gridview = findViewById(R.id.gridViewParkingLot);
+        gridview.setBackgroundColor(Color.WHITE);
+        gridview.setVerticalSpacing(60);
+        gridview.setHorizontalSpacing(20);
 
         //image buttons
 
@@ -154,8 +158,6 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
-        //padding adjustment
-
 
         //submit button
 
@@ -164,9 +166,15 @@ public class UserActivity extends AppCompatActivity {
     }
 
     private void AddDataList() {
-        StatusList.add(new ClientStatusImage(01, "ParkedCar", R.drawable.parkedcar));
-        StatusList.add(new ClientStatusImage(02, "Selected", R.drawable.selected));
-        StatusList.add(new ClientStatusImage(03, "Free", R.drawable.free));
-        StatusList.add(new ClientStatusImage(04, "Booked", R.drawable.booked));
+        StatusList.add(new ClientStatusImage(1, "ParkedCar", R.drawable.parkedcar));
+        StatusList.add(new ClientStatusImage(2, "Selected", R.drawable.selected));
+        StatusList.add(new ClientStatusImage(3, "Free", R.drawable.free));
+        StatusList.add(new ClientStatusImage(4, "Booked", R.drawable.booked));
+        StatusList.add(new ClientStatusImage(5, "Empty", R.drawable.emptyspot));
+        StatusList.add(new ClientStatusImage(6, "Empty", R.drawable.emptyspot));
+        StatusList.add(new ClientStatusImage(7, "ParkedCar", R.drawable.parkedcar));
+        StatusList.add(new ClientStatusImage(8, "Selected", R.drawable.selected));
+        StatusList.add(new ClientStatusImage(9, "Free", R.drawable.free));
+        StatusList.add(new ClientStatusImage(10, "Booked", R.drawable.booked));
     }
 }
