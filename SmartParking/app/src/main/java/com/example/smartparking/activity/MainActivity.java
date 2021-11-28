@@ -16,22 +16,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private UserViewModel userViewModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userViewModel = new ViewModelProvider.AndroidViewModelFactory(
-                MainActivity.this.getApplication()
-        ).create(UserViewModel.class);
-
-        userViewModel.getAllUsers().observe(this, users -> {
-            Log.d("TAG", "onCreate() " + users.get(0).getEmail());
-        });
-
-        //Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-        //startActivity(loginIntent);
+        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
     }
 }
