@@ -45,8 +45,8 @@ public class UserActivity extends AppCompatActivity {
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
         //get username from input on login to set text in user name textview
-        inputText = findViewById(R.id.textViewLayoutUsername);
-        userNameTextView.setText(inputText.getText());
+//        inputText = findViewById(R.id.textViewLayoutUsername);
+//        userNameTextView.setText(inputText.getText());
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);
         selectCategoryTxtView = findViewById(R.id.txtViewSelectCategory);
