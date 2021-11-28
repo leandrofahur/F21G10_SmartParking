@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.smartparking.R;
 import com.google.android.material.textfield.TextInputLayout;
@@ -31,6 +34,7 @@ public class UserActivity extends AppCompatActivity {
     private ImageButton disabledImgBtn;
     private Button submitBtn;
 
+    Toast currToast;
     private int clickedItemInd = -1;
 
 
@@ -60,6 +64,12 @@ public class UserActivity extends AppCompatActivity {
 
         //gridview
         //on click listener, add toast to each image
+        parkingLotGridView.setOnItemClickListener((AdapterView<?> adapterView, View view, int i, long l) -> {
+
+            currToast = Toast.makeText(UserActivity.this, StatusList.get(i).getStatusName(), Toast.LENGTH_LONG);
+            currToast.show();
+        });
+
         //on click listener for cars changing between free and selected
         //free-selected only once, if another one is clicked change previous back to free
         //padding adjustment (top & bottom)
