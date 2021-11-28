@@ -1,8 +1,11 @@
 package com.example.smartparking.activities;
 
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 
 import java.util.List;
 
@@ -30,6 +33,11 @@ public class StatusImagesAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         //needs to be implemented
+        if (view == null) {
+            ImageView statusViewItem = new ImageView (viewGroup.getContext());
+            statusViewItem.setImageResource(statusList.get(i).getStatusDraw());
+            view = statusViewItem;
+        }
 
         return view;
     }
