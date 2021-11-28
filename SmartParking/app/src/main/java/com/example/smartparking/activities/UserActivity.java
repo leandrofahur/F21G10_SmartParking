@@ -44,9 +44,7 @@ public class UserActivity extends AppCompatActivity {
         welcomeTxtView = findViewById(R.id.txtViewWelcome);
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
-        //get username from input on login to set text in user name textview
-//        inputText = findViewById(R.id.textViewLayoutUsername);
-//        userNameTextView.setText(inputText.getText());
+        //add name (input) to textview after welcome textview
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);
         selectCategoryTxtView = findViewById(R.id.txtViewSelectCategory);
@@ -60,11 +58,22 @@ public class UserActivity extends AppCompatActivity {
         parkingLotGridView.setAdapter(statusImagesAdapter);
         parkingLotGridView.setNumColumns(2);
 
-
+        //gridview
+        //on click listener, add toast to each image
         //on click listener for cars changing between free and selected
+        //free-selected only once, if another one is clicked change previous back to free
+        //padding adjustment (top & bottom)
 
-        //on click listener for type of vehicle
 
+        //image buttons
+        //on click listener - toast of names for each type of vehicle
+        //on click listener - change background to black & image color to yellow
+        //padding adjustment
+
+
+        //submit button
+        //check if previous ones were checked
+        //pop up screen to schedule time
     }
 
     private void AddDataList() {
