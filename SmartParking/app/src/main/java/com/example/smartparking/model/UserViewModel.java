@@ -14,6 +14,7 @@ import java.util.List;
 public class UserViewModel extends AndroidViewModel {
     public static UserRepository userRepository;
     public final LiveData<List<User>> getAllUsers;
+    public User getUser;
 
     public UserViewModel(@NonNull Application application) {
         super(application);
@@ -27,4 +28,5 @@ public class UserViewModel extends AndroidViewModel {
 
     public static void insertUser(User user) { userRepository.insert(user);}
 
+    public static User getUser(String email, String password) { return userRepository.getUser(email, password);}
 }

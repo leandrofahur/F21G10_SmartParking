@@ -1,6 +1,7 @@
 package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
 import android.content.Intent;
@@ -15,24 +16,28 @@ import com.example.smartparking.R;
 import com.example.smartparking.database.SmartParkingRoomDB;
 import com.example.smartparking.dao.UserDAO;
 import com.example.smartparking.model.User;
+import com.example.smartparking.model.UserViewModel;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private TextView textViewUsernameEmail2;
+    private TextView textViewEmail;
     private TextView textViewPassword;
     private TextView textViewConfirmPassword;
     private TextView textViewCallSignInIntent;
     private Button buttonSignup;
+
+    // DB:
+    UserViewModel userViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        textViewUsernameEmail2 = findViewById(R.id.textViewUsernameEmail2);
+        textViewEmail = findViewById(R.id.textViewEmail);
         textViewPassword = findViewById(R.id.textViewPassword);
         textViewConfirmPassword = findViewById(R.id.textViewConfirmPassword);
         buttonSignup = findViewById(R.id.buttonSignup);
@@ -41,33 +46,35 @@ public class SignupActivity extends AppCompatActivity {
 
         textViewCallSignInIntent.setPaintFlags(textViewCallSignInIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
+        // initialize the db instance and provide the abstraction to the userViewModel:
+        userViewModel = new ViewModelProvider.AndroidViewModelFactory(SignupActivity.this.getApplication()).create(UserViewModel.class);
+
         textViewCallSignInIntent.setOnClickListener((View view) -> {
             Intent signInIntent = new Intent(SignupActivity.this, LoginActivity.class);
             startActivity(signInIntent);
         });
-
-        //userDAO = Room.databaseBuilder(this, SmartParkingDB.class, "users.db").allowMainThreadQueries().build().userDAO();
 
         // check database and route the user, if valid, to the user activity:
         buttonSignup.setOnClickListener((View view) -> {
             ExecutorService executorService = Executors.newSingleThreadExecutor();
             executorService.execute(() -> {
                 try {
-                    String username = textViewUsernameEmail2.getText().toString();
+                    String email = textViewEmail.getText().toString();
                     String password = textViewPassword.getText().toString();
                     String passwordConf = textViewConfirmPassword.getText().toString();
 
-                    //if (password.equals(passwordConf)) {
-                    //    User user = new User(username,password);
-                    //    userDAO.insertUser(user);
-                    //    Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
-                    //    startActivity(returnToSignIn);
-                    //    finish();
-                    //} else if (username.isEmpty() || password.isEmpty()){
-                    //    Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
-                    //} else {
-                    //    Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show();
-                    //}
+                    if (password.equals(passwordConf)) {
+                        User user = new User(email, password);
+                        UserViewModel.insertUser(user);
+
+                        Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
+                        startActivity(returnToSignIn);
+                        finish();
+                    } else if (email.isEmpty() || password.isEmpty()){
+                        Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show();
+                    }
                 } catch (Exception ex) {
                     Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
                 }

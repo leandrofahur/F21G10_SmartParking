@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textViewLayoutUsername"
+            android:id="@+id/textViewLayoutEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -54,14 +54,14 @@
             app:boxStrokeColor="@color/gray_500"
             app:endIconMode="clear_text"
             app:hintTextColor="@color/gray_800"
-            app:startIconDrawable="@drawable/ic_user">
+            app:startIconDrawable="@drawable/ic_envelope">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textViewUsernameEmail2"
+                android:id="@+id/textViewEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="Username" />
+                android:hint="Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
