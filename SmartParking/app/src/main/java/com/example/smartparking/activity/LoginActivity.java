@@ -49,16 +49,11 @@ public class LoginActivity extends AppCompatActivity {
 
         textViewCallSignUpIntent.setPaintFlags(textViewCallSignUpIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
-        //db = Room.databaseBuilder(getApplicationContext(), SmartParkingRoomDB.class, "users.db").allowMainThreadQueries().build();
-
         // check database and route the user, if valid, to the user activity:
         buttonLogin.setOnClickListener((View view) -> {
-
-//            ExecutorService executorService = Executors.newSingleThreadExecutor();
-//            executorService.execute(() -> {
-                try {
-                    String username = textViewLayoutUsername.getEditText().getText().toString();
-                    String password = textViewLayoutPassword.getEditText().getText().toString();
+            try {
+                String username = textViewLayoutUsername.getEditText().getText().toString();
+                String password = textViewLayoutPassword.getEditText().getText().toString();
 
 //                    User user = userViewModel.getUser();
 //
@@ -72,10 +67,10 @@ public class LoginActivity extends AppCompatActivity {
 //                    } else {
 //                        Toast.makeText(this, "User not registered or Invalid credentials", Toast.LENGTH_SHORT).show();
 //                    }
-                } catch (Exception ex) {
-                    Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-//            });
+
+            } catch (Exception ex) {
+                Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         });
 
         // route the user for the signup activity:

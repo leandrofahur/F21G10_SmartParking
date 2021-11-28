@@ -50,12 +50,13 @@ public abstract class SmartParkingRoomDB extends RoomDatabase {
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
 
+            // delete everything form inside the DB:
             databaseWriteExecutor.execute(() -> {
                 // populate in the background:
                 UserDAO userDAO = INSTANCE.userDAO();
                 userDAO.deleteAllUsers();
 
-                // defualt data in the app for the first time we run:
+                // insert a default user:
                 User user = new User("douglas@college.ca","123");
                 userDAO.insertUser(user);
             });

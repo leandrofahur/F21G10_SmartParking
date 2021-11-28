@@ -16,6 +16,7 @@ import java.util.List;
 public class UserRepository {
     private UserDAO userDAO;
     private LiveData<List<User>> listLiveData;
+    private User user;
 
     // the constructor opens the connection and makes the DAO available.
     // the lifecycle is bounded by the scope of the repository object.
@@ -33,6 +34,13 @@ public class UserRepository {
         SmartParkingRoomDB.databaseWriteExecutor.execute(() -> {
             userDAO.insertUser(user);
         });
+    }
+
+    public User getUser(String email, String password) {
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> {
+            user = userDAO.getUser(email, password);
+        });
+        return user;
     }
 
 }
