@@ -6,16 +6,16 @@ import androidx.room.Room;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
-import com.example.smartparking.interfaces.UserDAO;
+import com.example.smartparking.database.SmartParkingDB;
+import com.example.smartparking.dao.UserDAO;
 import com.example.smartparking.model.User;
-import com.example.smartparking.model.UserDatabase;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.concurrent.ExecutorService;
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     // private ImageView imageViewLoginParkingLot;
 
     UserDAO userDAO;
-    UserDatabase db;
+    SmartParkingDB db;
 
     private TextInputLayout textViewLayoutUsername;
     private TextInputLayout textViewLayoutPassword;
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
         textViewCallSignUpIntent.setPaintFlags(textViewCallSignUpIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
-        db = Room.databaseBuilder(getApplicationContext(), UserDatabase.class, "users.db").allowMainThreadQueries().build();
+        db = Room.databaseBuilder(getApplicationContext(), SmartParkingDB.class, "users.db").allowMainThreadQueries().build();
 
         // check database and route the user, if valid, to the user activity:
         buttonLogin.setOnClickListener((View view) -> {

@@ -6,17 +6,18 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.smartparking.interfaces.UserDAO;
+import com.example.smartparking.dao.UserDAO;
 import com.example.smartparking.model.User;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public abstract class SmartParkingDB  extends RoomDatabase {
+@Database(entities = {User.class}, version = 1, exportSchema = false)
+public abstract class SmartParkingDB extends RoomDatabase {
     public abstract UserDAO userDAO();
 
     /*
-     * TODO: Review implementation for SIngleton pattern:
+     * TODO: Review implementation for Singleton pattern:
     // Implementation for the Singleton pattern. (This db instance is going to be running in a background thread)
     private static final int NUMBER_OF_THREADS = 4;
     private static volatile SmartParkingDB INSTANCE;
