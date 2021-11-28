@@ -63,6 +63,7 @@ public class UserActivity extends AppCompatActivity {
         parkingLotGridView.setNumColumns(2);
 
         //gridview
+
         //on click listener, add toast to each image
         parkingLotGridView.setOnItemClickListener((AdapterView<?> adapterView, View view, int i, long l) -> {
 
@@ -76,12 +77,39 @@ public class UserActivity extends AppCompatActivity {
 
 
         //image buttons
+
         //on click listener - toast of names for each type of vehicle
         //on click listener - change background to black & image color to yellow
+        carsImgBtn.setOnClickListener(view -> {
+            carsImgBtn.setImageResource(R.drawable.carclicked);
+            carsImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+            currToast = Toast.makeText(UserActivity.this, "Car", Toast.LENGTH_LONG);
+            currToast.show();
+        });
+        bikeImgBtn.setOnClickListener(view -> {
+            bikeImgBtn.setImageResource(R.drawable.bikeclicked);
+            bikeImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+            currToast = Toast.makeText(UserActivity.this, "Bike", Toast.LENGTH_LONG);
+            currToast.show();
+        });
+        vanImgBtn.setOnClickListener(view -> {
+            vanImgBtn.setImageResource(R.drawable.vanclicked);
+            vanImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+            currToast = Toast.makeText(UserActivity.this, "Van", Toast.LENGTH_LONG);
+            currToast.show();
+        });
+        disabledImgBtn.setOnClickListener(view -> {
+            disabledImgBtn.setImageResource(R.drawable.disabledclicked);
+            disabledImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+            currToast = Toast.makeText(UserActivity.this, "Disabled", Toast.LENGTH_LONG);
+            currToast.show();
+        });
+
         //padding adjustment
 
 
         //submit button
+
         //check if previous ones were checked
         //pop up screen to schedule time
     }
