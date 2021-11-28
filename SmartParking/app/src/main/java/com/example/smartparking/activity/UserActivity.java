@@ -1,4 +1,4 @@
-package com.example.smartparking.activities;
+package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

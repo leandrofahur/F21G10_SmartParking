@@ -5,67 +5,50 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.io.Serializable;
-
 @Entity(tableName = "users")
-
-public class User implements Serializable {
+public class User {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name="userid")
-    private int UserId;
-
-    @ColumnInfo(name="username")
-    private String UserName;
+    private int userId;
 
     @ColumnInfo(name="email")
-    private String Email;
+    private String email;
 
     @ColumnInfo(name="password")
-    private String Password;
+    private String password;
 
-    @NonNull
+    public User() {
+        // default constructor...
+    }
+
+    public User(@NonNull String email, @NonNull String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     public int getUserId() {
-        return UserId;
+        return userId;
     }
 
-    public void setUserId(@NonNull int userId) {
-        UserId = userId;
-    }
-
-    public String getUserName() {
-        return UserName;
-    }
-
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
-    }
-
-    public User(String userName, String password) {
-        UserName = userName;
-        Password = password;
-    }
-
-    public User(String UserName, String Email, String Password) {
-        this.UserName = UserName;
-        this.Email = Email;
-        this.Password = Password;
+        this.password = password;
     }
 }

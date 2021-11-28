@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParking">
         <activity
-            android:name=".activities.UserActivity"
+            android:name=".activity.UserActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.SignupActivity"
+            android:name=".activity.SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
