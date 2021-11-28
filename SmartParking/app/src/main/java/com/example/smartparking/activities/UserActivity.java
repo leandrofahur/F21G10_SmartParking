@@ -34,7 +34,8 @@ public class UserActivity extends AppCompatActivity {
     private ImageButton disabledImgBtn;
     private Button submitBtn;
 
-    Toast currToast;
+    private String control;
+    private Toast currToast;
     private int clickedItemInd = -1;
 
 
@@ -78,31 +79,79 @@ public class UserActivity extends AppCompatActivity {
 
         //image buttons
 
-        //on click listener - toast of names for each type of vehicle
-        //on click listener - change background to black & image color to yellow
+        //toast of names for each type of vehicle && change background to black and image color to yellow
+
+        List<ImageButton> viewBtns = new ArrayList<>();
+        viewBtns.add(carsImgBtn);
+        viewBtns.add(bikeImgBtn);
+        viewBtns.add(vanImgBtn);
+        viewBtns.add(disabledImgBtn);
+
+        List<Integer> originalImgBtn = new ArrayList<>();
+        originalImgBtn.add(R.drawable.car);
+        originalImgBtn.add(R.drawable.bike);
+        originalImgBtn.add(R.drawable.van);
+        originalImgBtn.add(R.drawable.disabled);
+
         carsImgBtn.setOnClickListener(view -> {
-            carsImgBtn.setImageResource(R.drawable.carclicked);
-            carsImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-            currToast = Toast.makeText(UserActivity.this, "Car", Toast.LENGTH_LONG);
-            currToast.show();
+
+            for(int i = 0; i < viewBtns.size(); i++) {
+                if(viewBtns.get(i).getId() == carsImgBtn.getId()) {
+                    carsImgBtn.setImageResource(R.drawable.carclicked);
+                    carsImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+                    currToast = Toast.makeText(UserActivity.this, "Car", Toast.LENGTH_LONG);
+                    currToast.show();
+                } else {
+                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+                }
+            }
         });
+
         bikeImgBtn.setOnClickListener(view -> {
-            bikeImgBtn.setImageResource(R.drawable.bikeclicked);
-            bikeImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-            currToast = Toast.makeText(UserActivity.this, "Bike", Toast.LENGTH_LONG);
-            currToast.show();
+
+            for(int i = 0; i < viewBtns.size(); i++) {
+                if(viewBtns.get(i).getId() == bikeImgBtn.getId()) {
+                    bikeImgBtn.setImageResource(R.drawable.bikeclicked);
+                    bikeImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+                    currToast = Toast.makeText(UserActivity.this, "Bike", Toast.LENGTH_LONG);
+                    currToast.show();
+                } else {
+                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+                }
+            }
         });
+
         vanImgBtn.setOnClickListener(view -> {
-            vanImgBtn.setImageResource(R.drawable.vanclicked);
-            vanImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-            currToast = Toast.makeText(UserActivity.this, "Van", Toast.LENGTH_LONG);
-            currToast.show();
+
+            for(int i = 0; i < viewBtns.size(); i++) {
+                if(viewBtns.get(i).getId() == vanImgBtn.getId()) {
+
+                    vanImgBtn.setImageResource(R.drawable.vanclicked);
+                    vanImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+                    currToast = Toast.makeText(UserActivity.this, "Van", Toast.LENGTH_LONG);
+                    currToast.show();
+                } else {
+                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+                }
+            }
         });
+
         disabledImgBtn.setOnClickListener(view -> {
-            disabledImgBtn.setImageResource(R.drawable.disabledclicked);
-            disabledImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-            currToast = Toast.makeText(UserActivity.this, "Disabled", Toast.LENGTH_LONG);
-            currToast.show();
+
+            for(int i = 0; i < viewBtns.size(); i++) {
+                if(viewBtns.get(i).getId() == disabledImgBtn.getId()) {
+                    disabledImgBtn.setImageResource(R.drawable.disabledclicked);
+                    disabledImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+                    currToast = Toast.makeText(UserActivity.this, "Disabled", Toast.LENGTH_LONG);
+                    currToast.show();
+                } else {
+                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+                }
+            }
         });
 
         //padding adjustment

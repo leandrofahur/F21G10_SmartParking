@@ -46,7 +46,6 @@
         android:id="@+id/txtViewSelectCategory"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/txtViewCategory" />
 
@@ -59,15 +58,15 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="48dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="48dp"
             android:backgroundTint="@color/yellow_500"
             android:gravity="center"
             android:text="@string/btnSubmit"
             android:textColor="#455A64"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -78,7 +77,6 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingTop="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -87,6 +85,7 @@
                 android:id="@+id/imgBtnCars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageCars"
                 app:srcCompat="@drawable/car"
@@ -96,6 +95,7 @@
                 android:id="@+id/imgBtnBike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageBike"
                 app:srcCompat="@drawable/bike"
@@ -105,6 +105,7 @@
                 android:id="@+id/imgBtnVan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageVan"
                 app:srcCompat="@drawable/van"
@@ -114,6 +115,7 @@
                 android:id="@+id/imgBtnDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_weight="0.25"
                 android:contentDescription="@string/btnImageDisabled"
                 app:srcCompat="@drawable/disabled"
