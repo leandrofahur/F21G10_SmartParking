@@ -15,17 +15,18 @@
         android:hint="@string/hintUsername"
         android:textColor="@color/gray_800"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imgViewParking"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="390dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="4dp"
         android:contentDescription="@string/imgViewParking"
         android:src="@drawable/login_parking_lot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtViewUserName" />
 
@@ -43,8 +44,8 @@
         android:id="@+id/txtViewAddVehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="48dp"
         android:text="@string/txtViewAddVehicles"
         android:textColor="@color/gray_800"
         android:textSize="16sp"
@@ -72,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +83,8 @@
         android:id="@+id/addSubscriptionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/addSubscriptionBtn"
         android:textColor="@color/gray_800"
@@ -94,34 +95,34 @@
         android:id="@+id/cancelSubscriptionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginEnd="100dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/cancelSubscriptionBtn"
         android:textColor="@color/gray_800"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toEndOf="@+id/addSubscriptionBtn"
-        app:layout_constraintTop_toBottomOf="@+id/mySubscriptionsListView" />
-
-    <ListView
-        android:id="@+id/myInvoicesListView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewMyInvoices" />
-
-    <TextView
-        android:id="@+id/txtViewMyInvoices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/txtViewInvoices"
-        android:textColor="@color/gray_800"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addSubscriptionBtn" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/yellow_500"
+        android:text="@string/myInvoicesBtn"
+        android:textColor="@color/gray_800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="31dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn"
+        app:srcCompat="@drawable/invoice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

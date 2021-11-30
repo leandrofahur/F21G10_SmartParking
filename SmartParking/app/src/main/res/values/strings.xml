@@ -17,7 +17,7 @@
     <string name="txtViewAddVehicles">Add Vehicle</string>
     <string name="addBtn">Add Button</string>
     <string name="addSubscriptionBtn">New Subscription</string>
-    <string name="cancelSubscriptionBtn">Cancel</string>
+    <string name="cancelSubscriptionBtn">Cancel Subscription</string>
     <string name="hintLicense">License Plate</string>
     <string name="hintMake">Make</string>
     <string name="hintModel">Model</string>
@@ -25,4 +25,5 @@
     <string name="descriptionParking">Parking Lot Sign</string>
     <string name="hintUsername">Username</string>
     <string name="txtViewInvoices">My Invoices</string>
+    <string name="myInvoicesBtn">View Invoices</string>
 </resources>
