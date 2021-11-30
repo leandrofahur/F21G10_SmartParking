@@ -47,7 +47,9 @@ public class UserActivity extends AppCompatActivity {
         welcomeTxtView = findViewById(R.id.txtViewWelcome);
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
-        //add name (input) to textview after welcome textview - relying on ending of loginactivity
+//        add name (input) to textview after welcome textview
+//        userNameTextView.setText();
+
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);
         selectCategoryTxtView = findViewById(R.id.txtViewSelectCategory);
@@ -69,10 +71,11 @@ public class UserActivity extends AppCompatActivity {
                 ImageView imageView = (ImageView) view;
                 imageView.setImageResource(R.drawable.selected);
             }
-
         });
 
         //free-selected only once, if another one is clicked change previous clicked back to free
+
+
 
         //spacing adjustment (top & bottom) - still try to add borders
         GridView gridview = findViewById(R.id.gridViewParkingLot);
