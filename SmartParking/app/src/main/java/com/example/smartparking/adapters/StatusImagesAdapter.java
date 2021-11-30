@@ -1,11 +1,11 @@
-package com.example.smartparking.activities;
+package com.example.smartparking.adapters;
 
-import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.smartparking.util.ClientStatusImage;
 
 import java.util.List;
 
@@ -32,7 +32,6 @@ public class StatusImagesAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        //needs to be implemented
         if (view == null) {
             ImageView statusViewItem = new ImageView (viewGroup.getContext());
             statusViewItem.setImageResource(statusList.get(i).getStatusDraw());

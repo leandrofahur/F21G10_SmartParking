@@ -3,19 +3,18 @@ package com.example.smartparking.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.smartparking.adapters.StatusImagesAdapter;
+import com.example.smartparking.util.ClientStatusImage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +73,8 @@ public class UserActivity extends AppCompatActivity {
         });
 
         //on click listener for cars changing between free and selected
+
+
         //free-selected only once, if another one is clicked change previous clicked back to free
         //spacing adjustment (top & bottom) - still try to add borders
         GridView gridview = findViewById(R.id.gridViewParkingLot);

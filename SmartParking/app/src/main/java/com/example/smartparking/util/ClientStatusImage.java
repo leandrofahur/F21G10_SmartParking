@@ -1,4 +1,4 @@
-package com.example.smartparking.activities;
+package com.example.smartparking.util;
 
 public class ClientStatusImage {
     int statusId;
