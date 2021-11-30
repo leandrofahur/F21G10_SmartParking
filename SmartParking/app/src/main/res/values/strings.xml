@@ -9,4 +9,7 @@
     <string name="btnImageVan">Vans</string>
     <string name="btnImageDisabled">Disabled</string>
     <string name="txtViewWelcome">Welcome</string>
+    <string name="txtViewCar">Car</string>
+    <string name="txtViewBike">Bike</string>
+    <string name="txtViewVan">Van</string>
 </resources>

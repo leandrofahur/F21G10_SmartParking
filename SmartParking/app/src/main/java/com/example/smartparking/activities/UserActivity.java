@@ -33,11 +33,8 @@ public class UserActivity extends AppCompatActivity {
     private ImageButton bikeImgBtn;
     private ImageButton vanImgBtn;
     private Button submitBtn;
-
-    private String control;
     private Toast currToast;
-    private Toast changToast;
-    private int clickedItemInd;
+
 
 
     @Override
@@ -69,16 +66,9 @@ public class UserActivity extends AppCompatActivity {
         parkingLotGridView.setOnItemClickListener((AdapterView<?> adapterView, View view, int i, long l) -> {
 
             if (StatusList.get(i).getStatusName().equals("Free")) {
-////                changToast = Toast.makeText(UserActivity.this, "Position: " + i , Toast.LENGTH_LONG);
-//                changToast.show();
                 ImageView imageView = (ImageView) view;
                 imageView.setImageResource(R.drawable.selected);
             }
-//            else {
-//                currToast = Toast.makeText(UserActivity.this, StatusList.get(i).getStatusName(), Toast.LENGTH_LONG);
-//                currToast.show();
-//            }
-
 
         });
 
