@@ -92,7 +92,6 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 String email = textViewLayoutEmail.getEditText().getText().toString();
                 String password = textViewLayoutPassword.getEditText().getText().toString();
-
                 User user = userViewModel.getUser(email, password);
                     if(user != null) {
                         if(email.equals(user.getEmail()) && password.equals(user.getPassword())) {
@@ -120,8 +119,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         FirebaseUser user = mAuth.getCurrentUser();
+
+        if(user != null) {
+            mGoogleSignInClient.signOut();
+        }
 
     }
 
