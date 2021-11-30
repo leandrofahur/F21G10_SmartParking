@@ -82,7 +82,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/addSubscriptionBtn"
-        android:textColor="#455A64"
+        android:textColor="@color/gray_800"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mySubscriptionsListView" />
 
@@ -93,7 +93,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/cancelSubscriptionBtn"
-        android:textColor="#455A64"
+        android:textColor="@color/gray_800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toEndOf="@+id/addSubscriptionBtn"

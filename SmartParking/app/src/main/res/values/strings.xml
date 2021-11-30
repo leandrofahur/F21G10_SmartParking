@@ -18,4 +18,9 @@
     <string name="addBtn">Add Button</string>
     <string name="addSubscriptionBtn">New Subscription</string>
     <string name="cancelSubscriptionBtn">Cancel</string>
+    <string name="hintLicense">License Plate</string>
+    <string name="hintMake">Make</string>
+    <string name="hintModel">Model</string>
+    <string name="hintColor">Color</string>
+    <string name="descriptionParking">Parking Lot Sign</string>
 </resources>
