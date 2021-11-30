@@ -36,7 +36,7 @@ public class UserActivity extends AppCompatActivity {
 
     private String control;
     private Toast currToast;
-    private int clickedItemInd = -1;
+    private int clickedItemInd;
 
 
     @Override
@@ -70,6 +70,7 @@ public class UserActivity extends AppCompatActivity {
 
             currToast = Toast.makeText(UserActivity.this, StatusList.get(i).getStatusName(), Toast.LENGTH_LONG);
             currToast.show();
+
         });
 
         //on click listener for cars changing between free and selected
