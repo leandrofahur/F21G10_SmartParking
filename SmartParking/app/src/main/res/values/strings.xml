@@ -26,4 +26,5 @@
     <string name="hintUsername">Username</string>
     <string name="txtViewInvoices">My Invoices</string>
     <string name="myInvoicesBtn">View Invoices</string>
+    <string name="descriptionInvoice">Invoice Imag</string>
 </resources>

@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addSubscriptionBtn" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/viewInvoiceBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -116,13 +116,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/invoiceImgView"
         android:layout_width="31dp"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        android:contentDescription="@string/descriptionInvoice"
+        app:layout_constraintEnd_toStartOf="@+id/viewInvoiceBtn"
         app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn"
-        app:srcCompat="@drawable/invoice" />
+        app:srcCompat="@drawable/invoice"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
