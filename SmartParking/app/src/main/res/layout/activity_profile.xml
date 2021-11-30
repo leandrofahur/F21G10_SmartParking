@@ -10,15 +10,17 @@
         android:id="@+id/txtViewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
+        android:hint="@string/hintUsername"
+        android:textColor="@color/gray_800"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgViewParking"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/imgViewParking"
         android:src="@drawable/login_parking_lot"
@@ -32,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgViewParking" />
@@ -41,8 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="230dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="50dp"
         android:text="@string/txtViewAddVehicles"
+        android:textColor="@color/gray_800"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/addVehicleBtn"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,17 +72,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAddVehicle" />
 
     <Button
         android:id="@+id/addSubscriptionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="52dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/addSubscriptionBtn"
@@ -95,36 +99,29 @@
         android:text="@string/cancelSubscriptionBtn"
         android:textColor="@color/gray_800"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.788"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toEndOf="@+id/addSubscriptionBtn"
         app:layout_constraintTop_toBottomOf="@+id/mySubscriptionsListView" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="5dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="1dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="@color/yellow_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewAddVehicle" />
-
-    <ScrollView
-        android:id="@+id/scrollViewInvoices"
+    <ListView
+        android:id="@+id/myInvoicesListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addSubscriptionBtn">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewMyInvoices" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <TextView
+        android:id="@+id/txtViewMyInvoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/txtViewInvoices"
+        android:textColor="@color/gray_800"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addSubscriptionBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

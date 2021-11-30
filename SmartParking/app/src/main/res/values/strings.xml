@@ -23,4 +23,6 @@
     <string name="hintModel">Model</string>
     <string name="hintColor">Color</string>
     <string name="descriptionParking">Parking Lot Sign</string>
+    <string name="hintUsername">Username</string>
+    <string name="txtViewInvoices">My Invoices</string>
 </resources>
