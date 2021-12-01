@@ -15,9 +15,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     private TextView txtViewUserName;
     private Button addVehicleBtn;
-    private Button addSubscriptionBtn;
-    private Button cancelSubscriptionBtn;
-    private Button viewInvoiceBtn;
+    private Button bookSpotBtn;
+    private Button logOutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
             setContentView(R.layout.layout_addvehicle);
         });
 
-        addSubscriptionBtn = findViewById(R.id.addSubscriptionBtn);
-        cancelSubscriptionBtn = findViewById(R.id.cancelSubscriptionBtn);
-        viewInvoiceBtn = findViewById(R.id.viewInvoiceBtn);
+        bookSpotBtn = findViewById(R.id.bookYourSpotBtn);
+        logOutBtn = findViewById(R.id.logOutBtn);
     }
 }

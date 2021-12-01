@@ -58,7 +58,7 @@
             android:backgroundTint="@color/yellow_500"
             android:gravity="center"
             android:text="@string/btnSubmit"
-            android:textColor="#455A64"
+            android:textColor="@color/gray_800"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
