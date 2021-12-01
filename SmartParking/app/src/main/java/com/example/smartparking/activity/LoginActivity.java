@@ -96,12 +96,15 @@ public class LoginActivity extends AppCompatActivity {
                     if(user != null) {
                         if(email.equals(user.getEmail()) && password.equals(user.getPassword())) {
                             Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
-                            //userIntent.putExtra("User", user.getUserName());
+                            userIntent.putExtra("Email",user.getEmail());
                             startActivity(userIntent);
                             finish();
+                        } else {
+                            Toast.makeText(this, "User not registered or Invalid credentials", Toast.LENGTH_SHORT).show();
                         }
+
                     } else {
-                        Toast.makeText(this, "User not registered or Invalid credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Problem with the db, try it again!!!", Toast.LENGTH_SHORT).show();
                     }
 
             } catch (Exception ex) {

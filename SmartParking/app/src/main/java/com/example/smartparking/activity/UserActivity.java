@@ -50,7 +50,7 @@ public class UserActivity extends AppCompatActivity {
         welcomeTxtView = findViewById(R.id.txtViewWelcome);
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
-        userNameTextView.setText(getIntent().getExtras().getString("Name"));
+        userNameTextView.setText(getIntent().getExtras().getString("Email"));
 
         // TODO: add name (input) to textview after welcome textview
         //inputText = findViewById(R.id.textViewLayoutUsername);
