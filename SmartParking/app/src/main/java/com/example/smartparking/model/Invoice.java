@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "invoices", foreignKeys = {@ForeignKey(entity = User.class,
@@ -45,12 +46,16 @@ public class Invoice {
     @ColumnInfo(name="userid")
     private Integer userId;
 
+    @Ignore
     private double rate;
+    @Ignore
     private double duration;
+    @Ignore
     private double VAN_RATE;
+    @Ignore
     private double CAR_RATE;
+    @Ignore
     private double BIKE_RATE;
-    //TODO: See if there is annotation to exclude from table creation
 
     public Invoice() {
         //default
