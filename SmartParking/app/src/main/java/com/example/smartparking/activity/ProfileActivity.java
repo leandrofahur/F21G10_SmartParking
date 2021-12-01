@@ -26,12 +26,8 @@ public class ProfileActivity extends AppCompatActivity {
         txtViewUserName = findViewById(R.id.txtViewUserName);
         txtViewUserName.setText(getIntent().getExtras().getString("Email"));
 
-        addVehicleBtn = findViewById(R.id.addVehicleBtn);
-        addVehicleBtn.setOnClickListener(view->{
-            setContentView(R.layout.layout_addvehicle);
-        });
-
-        bookSpotBtn = findViewById(R.id.bookYourSpotBtn);
-        logOutBtn = findViewById(R.id.logOutBtn);
+        //addVehicleBtn = findViewById(R.id.addVehicleBtn);
+        //bookSpotBtn = findViewById(R.id.bookYourSpotBtn);
+        //logOutBtn = findViewById(R.id.logOutBtn);
     }
 }

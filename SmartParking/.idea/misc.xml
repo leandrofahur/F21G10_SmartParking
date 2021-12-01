@@ -13,7 +13,8 @@
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.18795289855072464" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.38958333333333334" />
         <entry key="app/src/main/res/layout/activity_user.xml" value="0.29046093285279495" />
-        <entry key="app/src/main/res/layout/layout_addvehicle.xml" value="0.18795289855072464" />
+        <entry key="app/src/main/res/layout/layout_addvehicle.xml" value="0.15849507067631288" />
+        <entry key="app/src/main/res/layout/layout_invoice.xml" value="0.15579710144927536" />
       </map>
     </option>
   </component>
