@@ -1,15 +1,30 @@
 <resources>
     <string name="app_name">SmartParking</string>
-    <string name="txtTitleUser">User</string>
-    <string name="btnTest">Button</string>
-    <string name="btnSubmit">Submit</string>
-    <string name="txtViewCategory">PLEASE, SELECT YOUR CATEGORY</string>
-    <string name="btnImageCars">Car</string>
-    <string name="btnImageBike">Bike</string>
-    <string name="btnImageVan">Vans</string>
-    <string name="btnImageDisabled">Disabled</string>
-    <string name="txtViewWelcome">Welcome</string>
-    <string name="txtViewCar">Car</string>
-    <string name="txtViewBike">Bike</string>
-    <string name="txtViewVan">Van</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="txtViewMyVehicles">My Vehicles</string>
+    <string name="imgViewParking">Parking Lot</string>
+    <string name="txtViewAddVehicles">Add Vehicle</string>
+    <string name="addBtn">Add Button</string>
+    <string name="addSubscriptionBtn">New Subscription</string>
+    <string name="cancelSubscriptionBtn">Cancel Subscription</string>
+    <string name="hintLicense">License Plate</string>
+    <string name="hintMake">Make</string>
+    <string name="hintModel">Model</string>
+    <string name="hintColor">Color</string>
+    <string name="descriptionParking">Parking Lot Sign</string>
+    <string name="hintUsername">Username</string>
+    <string name="txtViewInvoices">My Invoices</string>
+    <string name="myInvoicesBtn">View Invoices</string>
+    <string name="descriptionInvoice">Invoice Imag</string>
 </resources>
