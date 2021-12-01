@@ -23,6 +23,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.net.ssl.SSLEngineResult;
+
 public class UserActivity extends AppCompatActivity {
 
     List<ClientStatusImage> StatusList = new ArrayList<>(); //empty list
