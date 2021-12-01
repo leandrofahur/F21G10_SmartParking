@@ -31,13 +31,8 @@ public class UserActivity extends AppCompatActivity {
     private TextView userNameTextView;
     private TextInputLayout inputText;
     private GridView parkingLotGridView;
-    private TextView selectCategoryTxtView;
-    private ImageButton carsImgBtn;
-    private ImageButton bikeImgBtn;
-    private ImageButton vanImgBtn;
     private Button submitBtn;
-    private Toast currToast;
-    int currentPosition = -1;
+    private Button backToProfileBtn;
     int ctrl = -1;
 
     @Override
@@ -53,11 +48,8 @@ public class UserActivity extends AppCompatActivity {
         userNameTextView.setText(getIntent().getExtras().getString("Email"));
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);
-        selectCategoryTxtView = findViewById(R.id.txtViewSelectCategory);
-        carsImgBtn = findViewById(R.id.imgBtnCars);
-        bikeImgBtn = findViewById(R.id.imgBtnBike);
-        vanImgBtn = findViewById(R.id.imgBtnVan);
         submitBtn = findViewById(R.id.btnSubmit);
+        backToProfileBtn = findViewById(R.id.backToProfileBtn);
 
         StatusImagesAdapter statusImagesAdapter = new StatusImagesAdapter(StatusList);
         parkingLotGridView.setAdapter(statusImagesAdapter);
@@ -95,86 +87,86 @@ public class UserActivity extends AppCompatActivity {
 
         //image buttons
 
-        //toast of names for each type of vehicle && change background to black and image color to yellow
-        List<ImageButton> viewBtns = new ArrayList<>();
-        viewBtns.add(carsImgBtn);
-        viewBtns.add(bikeImgBtn);
-        viewBtns.add(vanImgBtn);
-
-        List<Integer> originalImgBtn = new ArrayList<>();
-        originalImgBtn.add(R.drawable.car);
-        originalImgBtn.add(R.drawable.bike);
-        originalImgBtn.add(R.drawable.van);
-
-        carsImgBtn.setOnClickListener(view -> {
-
-            for(int i = 0; i < viewBtns.size(); i++) {
-                if(viewBtns.get(i).getId() == carsImgBtn.getId()) {
-                    carsImgBtn.setImageResource(R.drawable.carclicked);
-                    carsImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-
-                } else {
-                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
-                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
-                }
-            }
-        });
-
-        bikeImgBtn.setOnClickListener(view -> {
-
-            for(int i = 0; i < viewBtns.size(); i++) {
-                if(viewBtns.get(i).getId() == bikeImgBtn.getId()) {
-                    bikeImgBtn.setImageResource(R.drawable.bikeclicked);
-                    bikeImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-
-                } else {
-                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
-                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
-                }
-            }
-        });
-
-        vanImgBtn.setOnClickListener(view -> {
-
-            for(int i = 0; i < viewBtns.size(); i++) {
-                if(viewBtns.get(i).getId() == vanImgBtn.getId()) {
-
-                    vanImgBtn.setImageResource(R.drawable.vanclicked);
-                    vanImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
-
-                } else {
-                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
-                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
-                }
-            }
-        });
-
-        submitBtn.setOnClickListener(view -> {
-
-            Toast.makeText(UserActivity.this, "{\nparking grid: " + !parkingLotGridView.isSelected() + "\nCars: " +
-                                                                        !carsImgBtn.isSelected() + "\nBike: " +
-                                                                        !bikeImgBtn.isSelected() + "\nVan: " +
-                                                                        !vanImgBtn.isSelected() + "\n}"
-
-                    , Toast.LENGTH_SHORT).show();
-
-            // 0 0 0
-            // 0 0 1
-            // 0 1 0
-            // 0 1 1
-            // 1 0 0
-            // 1 0 1
-            // 1 1 0
-            // 1 1 1
-
-//            if (!parkingLotGridView.isSelected()) {
-//                Toast.makeText(UserActivity.this, "Please select a spot", Toast.LENGTH_SHORT).show();
-//            } else if (!carsImgBtn.isSelected() || !bikeImgBtn.isSelected() || !vanImgBtn.isSelected()) {
-//                 Toast.makeText(UserActivity.this, "Please select a type of vehicle", Toast.LENGTH_SHORT).show();
-//            } else {
-//                //TODO: pop up screen to schedule time && send invoice
+//        //toast of names for each type of vehicle && change background to black and image color to yellow
+//        List<ImageButton> viewBtns = new ArrayList<>();
+//        viewBtns.add(carsImgBtn);
+//        viewBtns.add(bikeImgBtn);
+//        viewBtns.add(vanImgBtn);
+//
+//        List<Integer> originalImgBtn = new ArrayList<>();
+//        originalImgBtn.add(R.drawable.car);
+//        originalImgBtn.add(R.drawable.bike);
+//        originalImgBtn.add(R.drawable.van);
+//
+//        carsImgBtn.setOnClickListener(view -> {
+//
+//            for(int i = 0; i < viewBtns.size(); i++) {
+//                if(viewBtns.get(i).getId() == carsImgBtn.getId()) {
+//                    carsImgBtn.setImageResource(R.drawable.carclicked);
+//                    carsImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+//
+//                } else {
+//                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+//                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+//                }
 //            }
-        });
+//        });
+//
+//        bikeImgBtn.setOnClickListener(view -> {
+//
+//            for(int i = 0; i < viewBtns.size(); i++) {
+//                if(viewBtns.get(i).getId() == bikeImgBtn.getId()) {
+//                    bikeImgBtn.setImageResource(R.drawable.bikeclicked);
+//                    bikeImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+//
+//                } else {
+//                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+//                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+//                }
+//            }
+//        });
+//
+//        vanImgBtn.setOnClickListener(view -> {
+//
+//            for(int i = 0; i < viewBtns.size(); i++) {
+//                if(viewBtns.get(i).getId() == vanImgBtn.getId()) {
+//
+//                    vanImgBtn.setImageResource(R.drawable.vanclicked);
+//                    vanImgBtn.setBackgroundColor(getResources().getColor(R.color.gray_800));
+//
+//                } else {
+//                    viewBtns.get(i).setBackgroundColor(getResources().getColor(R.color.gray_200));
+//                    viewBtns.get(i).setImageResource(originalImgBtn.get(i));
+//                }
+//            }
+//        });
+//
+//        submitBtn.setOnClickListener(view -> {
+//
+//            Toast.makeText(UserActivity.this, "{\nparking grid: " + !parkingLotGridView.isSelected() + "\nCars: " +
+//                                                                        !carsImgBtn.isSelected() + "\nBike: " +
+//                                                                        !bikeImgBtn.isSelected() + "\nVan: " +
+//                                                                        !vanImgBtn.isSelected() + "\n}"
+//
+//                    , Toast.LENGTH_SHORT).show();
+//
+//            // 0 0 0
+//            // 0 0 1
+//            // 0 1 0
+//            // 0 1 1
+//            // 1 0 0
+//            // 1 0 1
+//            // 1 1 0
+//            // 1 1 1
+//
+////            if (!parkingLotGridView.isSelected()) {
+////                Toast.makeText(UserActivity.this, "Please select a spot", Toast.LENGTH_SHORT).show();
+////            } else if (!carsImgBtn.isSelected() || !bikeImgBtn.isSelected() || !vanImgBtn.isSelected()) {
+////                 Toast.makeText(UserActivity.this, "Please select a type of vehicle", Toast.LENGTH_SHORT).show();
+////            } else {
+////                //TODO: pop up screen to schedule time && send invoice
+////            }
+//        });
     }
 
     private void AddDataList() {
