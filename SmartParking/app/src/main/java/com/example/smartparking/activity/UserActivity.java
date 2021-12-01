@@ -2,15 +2,13 @@ package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -152,14 +150,30 @@ public class UserActivity extends AppCompatActivity {
         });
 
         submitBtn.setOnClickListener(view -> {
-            if (!parkingLotGridView.isSelected()) {
-                Toast.makeText(UserActivity.this, "Please select a spot", Toast.LENGTH_LONG).show();
-            } else if (!carsImgBtn.isSelected()|| !bikeImgBtn.isPressed() || !vanImgBtn.isPressed()) {
-                 Toast.makeText(UserActivity.this, "Please select a type of vehicle", Toast.LENGTH_LONG).show();
 
-            } else {
-                //TODO: pop up screen to schedule time && send invoice
-            }
+            Toast.makeText(UserActivity.this, "{\nparking grid: " + !parkingLotGridView.isSelected() + "\nCars: " +
+                                                                        !carsImgBtn.isSelected() + "\nBike: " +
+                                                                        !bikeImgBtn.isSelected() + "\nVan: " +
+                                                                        !vanImgBtn.isSelected() + "\n}"
+
+                    , Toast.LENGTH_SHORT).show();
+
+            // 0 0 0
+            // 0 0 1
+            // 0 1 0
+            // 0 1 1
+            // 1 0 0
+            // 1 0 1
+            // 1 1 0
+            // 1 1 1
+
+//            if (!parkingLotGridView.isSelected()) {
+//                Toast.makeText(UserActivity.this, "Please select a spot", Toast.LENGTH_SHORT).show();
+//            } else if (!carsImgBtn.isSelected() || !bikeImgBtn.isSelected() || !vanImgBtn.isSelected()) {
+//                 Toast.makeText(UserActivity.this, "Please select a type of vehicle", Toast.LENGTH_SHORT).show();
+//            } else {
+//                //TODO: pop up screen to schedule time && send invoice
+//            }
         });
     }
 

@@ -27,4 +27,17 @@
     <string name="txtViewInvoices">My Invoices</string>
     <string name="myInvoicesBtn">View Invoices</string>
     <string name="descriptionInvoice">Invoice Imag</string>
+
+    <string name="txtTitleUser">User</string>
+    <string name="btnTest">Button</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="txtViewCategory">PLEASE, SELECT YOUR CATEGORY</string>
+    <string name="btnImageCars">Car</string>
+    <string name="btnImageBike">Bike</string>
+    <string name="btnImageVan">Vans</string>
+    <string name="btnImageDisabled">Disabled</string>
+    <string name="txtViewWelcome">Welcome</string>
+    <string name="txtViewCar">Car</string>
+    <string name="txtViewBike">Bike</string>
+    <string name="txtViewVan">Van</string>
 </resources>

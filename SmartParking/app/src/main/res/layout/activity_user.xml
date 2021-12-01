@@ -22,7 +22,7 @@
             android:layout_marginTop="20dp"
             android:layout_weight="0.8"
             android:gravity="center_horizontal"
-            android:text="@string/txtViewWelcome"
+            android:text="Welcome"
             android:textSize="16sp" />
 
         <TextView
