@@ -157,25 +157,17 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
-
-        //submit button
-
-//        //TODO: check if previous ones were checked - is selected not working, check other methods
         submitBtn.setOnClickListener(view -> {
-
             if (!parkingLotGridView.isSelected()) {
                 Toast.makeText(UserActivity.this, "Please select a spot", Toast.LENGTH_LONG).show();
-            }
-
-            if (!carsImgBtn.isSelected()|| !bikeImgBtn.isPressed() || !vanImgBtn.isPressed()) {
+            } else if (!carsImgBtn.isSelected()|| !bikeImgBtn.isPressed() || !vanImgBtn.isPressed()) {
                  Toast.makeText(UserActivity.this, "Please select a type of vehicle", Toast.LENGTH_LONG).show();
 
+            } else {
+                //TODO: pop up screen to schedule time && send invoice
+
             }
-
         });
-
-
-        //TODO: pop up screen to schedule time && send invoice
     }
 
     private void AddDataList() {
