@@ -101,5 +101,7 @@ public class UserActivity extends AppCompatActivity {
         StatusList.add(new ClientStatusImage(8, "Free", R.drawable.free));
         StatusList.add(new ClientStatusImage(9, "Free", R.drawable.free));
         StatusList.add(new ClientStatusImage(10, "ParkedCar", R.drawable.parkedcarsidetwo));
+        StatusList.add(new ClientStatusImage(11, "ParkingLines", R.drawable.parkinglines));
+
     }
 }
