@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddVehicleActivity extends AppCompatActivity {
 
@@ -23,6 +24,12 @@ public class AddVehicleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_vehicle);
 
+        editTextLicensePlate = findViewById(R.id.editTextLicensePlate);
+        editTextMakeAndModel = findViewById(R.id.editTextMakeAndModel);
+        editTextModel = findViewById(R.id.editTextModel);
+        editTextColor = findViewById(R.id.editTextColor);
+
+        addVehicleSubmitBtn = findViewById(R.id.addVehicleSubmitBtn);
         backBtn = findViewById(R.id.backBtn);
 
         backBtn.setOnClickListener(view -> {
@@ -31,5 +38,14 @@ public class AddVehicleActivity extends AppCompatActivity {
             startActivity(profileIntent);
             finish();
         });
+
+        addVehicleSubmitBtn.setOnClickListener(view -> {
+            if(editTextLicensePlate.getText().toString().isEmpty()) {
+                Toast.makeText(this, "License Plate cannot be empty", Toast.LENGTH_SHORT).show();
+            } else {
+
+            }
+        });
+
     }
 }
