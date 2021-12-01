@@ -171,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
 
-                            Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
 
                             Bundle myBundle = new Bundle();
                             userIntent.putExtra("Name",user.getDisplayName());

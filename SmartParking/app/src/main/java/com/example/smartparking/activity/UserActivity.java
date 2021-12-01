@@ -40,8 +40,6 @@ public class UserActivity extends AppCompatActivity {
     private Toast currToast;
     int currentPosition = -1;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +50,13 @@ public class UserActivity extends AppCompatActivity {
         welcomeTxtView = findViewById(R.id.txtViewWelcome);
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
-//        TODO: add name (input) to textview after welcome textview
-//        inputText = findViewById(R.id.textViewLayoutUsername);
-//        String username = inputText.getEditText().getText().toString();
-//        userNameTextView.setText(username);
+        userNameTextView.setText(getIntent().getExtras().getString("Name"));
+
+        // TODO: add name (input) to textview after welcome textview
+        //inputText = findViewById(R.id.textViewLayoutUsername);
+        //String username = inputText.getEditText().getText().toString();
+        // userNameTextView.setText(username);
+
 
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);

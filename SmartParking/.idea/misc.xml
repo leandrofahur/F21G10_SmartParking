@@ -7,28 +7,10 @@
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_user.xml" value="0.36666666666666664" />
-<<<<<<< HEAD
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_login.xml" value="0.2109375" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_profile.xml" value="0.22" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_user.xml" value="0.33" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/app_bar_profile.xml" value="0.2269021739130435" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/content_profile.xml" value="0.2269021739130435" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/fragment_dashboard.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/fragment_gallery.xml" value="0.2269021739130435" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/fragment_home.xml" value="0.2269021739130435" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/fragment_notifications.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/fragment_slideshow.xml" value="0.2269021739130435" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/nav_header_profile.xml" value="0.67" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/menu/activity_main_drawer.xml" value="0.23541666666666666" />
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18072916666666666" />
-=======
-        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_user.xml" value="0.33" />
->>>>>>> origin/feature/user_view
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.38958333333333334" />
-        <entry key="app/src/main/res/layout/activity_user.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.1549313456041861" />
       </map>
     </option>
   </component>
