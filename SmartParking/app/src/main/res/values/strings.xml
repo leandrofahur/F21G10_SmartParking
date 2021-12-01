@@ -40,4 +40,5 @@
     <string name="txtViewCar">Car</string>
     <string name="txtViewBike">Bike</string>
     <string name="txtViewVan">Van</string>
+    <string name="txtViewSpot">Book Your Spot</string>
 </resources>
