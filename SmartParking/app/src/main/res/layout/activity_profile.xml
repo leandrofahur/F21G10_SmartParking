@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
-        android:hint="@string/hintUsername"
         android:textColor="@color/gray_800"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

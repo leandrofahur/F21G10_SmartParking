@@ -67,9 +67,13 @@ public class SignupActivity extends AppCompatActivity {
                         User user = new User(email, password);
                         UserViewModel.insertUser(user);
 
-                        Intent returnToSignIn = new Intent (SignupActivity.this, LoginActivity.class);
-                        startActivity(returnToSignIn);
+                        Intent profileIntent = new Intent(SignupActivity.this, ProfileActivity.class);
+
+                        Bundle myBundle = new Bundle();
+                        profileIntent.putExtra("Email",user.getEmail());
+                        startActivity(profileIntent);
                         finish();
+
                     } else if (email.isEmpty() || password.isEmpty()){
                         Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
                     } else {
