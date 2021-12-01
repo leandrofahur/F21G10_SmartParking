@@ -41,4 +41,6 @@
     <string name="txtViewBike">Bike</string>
     <string name="txtViewVan">Van</string>
     <string name="txtViewSpot">Book Your Spot</string>
+    <string name="backBtn">Back</string>
+    <string name="backProfile">BACK TO PROFILE</string>
 </resources>

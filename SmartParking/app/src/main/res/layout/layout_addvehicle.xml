@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imgViewAddVehicle"
-        android:layout_width="187dp"
-        android:layout_height="190dp"
+        android:layout_width="149dp"
+        android:layout_height="162dp"
         android:layout_marginTop="64dp"
         android:contentDescription="@string/descriptionParking"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,5 +94,19 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
         tools:ignore="TextContrastCheck"
         tools:text="@string/txtViewAddVehicles" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/yellow_500"
+        android:text="@string/backBtn"
+        android:textColor="@color/gray_800"
+        app:layout_constraintBottom_toTopOf="@+id/imgViewAddVehicle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
