@@ -8,13 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.smartparking.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.w3c.dom.Text;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private TextView txtViewUserName;
-    private Button addVehicleBtn;
+    private FloatingActionButton addVehicleBtn;
     private Button bookSpotBtn;
     private Button logOutBtn;
 
@@ -23,15 +23,16 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        txtViewUserName = findViewById(R.id.txtViewUserName);
-        txtViewUserName.setText(getIntent().getExtras().getString("Email"));
-
         addVehicleBtn = findViewById(R.id.addVehicleBtn);
-        addVehicleBtn.setOnClickListener(view->{
-            setContentView(R.layout.layout_addvehicle);
+
+        addVehicleBtn.setOnClickListener(view -> {
+            Intent AddVehicleIntent = new Intent(ProfileActivity.this, AddVehicleActivity.class);
+            startActivity(AddVehicleIntent);
+            finish();
         });
 
-        bookSpotBtn = findViewById(R.id.bookYourSpotBtn);
-        logOutBtn = findViewById(R.id.logOutBtn);
+
+        //bookSpotBtn = findViewById(R.id.bookYourSpotBtn);
+        //logOutBtn = findViewById(R.id.logOutBtn);
     }
 }

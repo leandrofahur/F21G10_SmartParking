@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParking">
         <activity
+            android:name=".activity.AddVehicleActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.ProfileActivity"
             android:exported="true" />
         <activity
