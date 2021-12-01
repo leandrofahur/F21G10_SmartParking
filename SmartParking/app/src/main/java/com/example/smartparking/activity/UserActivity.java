@@ -40,6 +40,7 @@ public class UserActivity extends AppCompatActivity {
     private Button submitBtn;
     private Toast currToast;
     int currentPosition = -1;
+    int ctrl = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +53,6 @@ public class UserActivity extends AppCompatActivity {
         userNameTextView = findViewById(R.id.txtViewNameUser);
 
         userNameTextView.setText(getIntent().getExtras().getString("Email"));
-
-        // TODO: add name (input) to textview after welcome textview
-        //inputText = findViewById(R.id.textViewLayoutUsername);
-        //String username = inputText.getEditText().getText().toString();
-        // userNameTextView.setText(username);
-
-
 
         parkingLotGridView = findViewById(R.id.gridViewParkingLot);
         selectCategoryTxtView = findViewById(R.id.txtViewSelectCategory);
@@ -165,7 +159,6 @@ public class UserActivity extends AppCompatActivity {
 
             } else {
                 //TODO: pop up screen to schedule time && send invoice
-
             }
         });
     }
