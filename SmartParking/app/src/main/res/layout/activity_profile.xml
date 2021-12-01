@@ -19,9 +19,9 @@
 
     <ImageView
         android:id="@+id/imgViewParking"
-        android:layout_width="390dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="401dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/imgViewParking"
         android:src="@drawable/login_parking_lot"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,6 @@
         android:id="@+id/listViewMyVehicles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +42,11 @@
         android:id="@+id/txtViewAddVehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="210dp"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="48dp"
         android:text="@string/txtViewAddVehicles"
         android:textColor="@color/gray_800"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/addVehicleBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listViewMyVehicles" />
 
@@ -56,56 +54,22 @@
         android:id="@+id/addVehicleBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/yellow_500"
         android:clickable="true"
         android:contentDescription="@string/addBtn"
         android:focusable="true"
         android:src="@android:drawable/ic_input_add"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtViewAddVehicle"
         app:layout_constraintTop_toBottomOf="@+id/listViewMyVehicles"
         tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
-
-    <ListView
-        android:id="@+id/mySubscriptionsListView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewAddVehicle" />
-
-    <Button
-        android:id="@+id/addSubscriptionBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/yellow_500"
-        android:text="@string/addSubscriptionBtn"
-        android:textColor="@color/gray_800"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mySubscriptionsListView" />
-
-    <Button
-        android:id="@+id/cancelSubscriptionBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:backgroundTint="@color/yellow_500"
-        android:text="@string/cancelSubscriptionBtn"
-        android:textColor="@color/gray_800"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addSubscriptionBtn" />
 
     <Button
         android:id="@+id/viewInvoiceBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="30dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/myInvoicesBtn"
@@ -113,20 +77,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAddVehicle" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bookYourSpotBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/yellow_500"
         android:text="@string/txtViewSpot"
         android:textColor="@color/gray_800"
         app:layout_constraintEnd_toStartOf="@+id/viewInvoiceBtn"
         app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelSubscriptionBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAddVehicle" />
+
+    <Button
+        android:id="@+id/logOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/yellow_500"
+        android:text="@string/logOutBtn"
+        android:textColor="@color/gray_800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookYourSpotBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
