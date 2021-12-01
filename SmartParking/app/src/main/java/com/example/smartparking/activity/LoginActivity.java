@@ -172,14 +172,13 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
 
-                            Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
+                            Intent profileIntent = new Intent(LoginActivity.this, ProfileActivity.class);
 
                             //Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
 
                             Bundle myBundle = new Bundle();
-                            userIntent.putExtra("Name",user.getDisplayName());
-                            userIntent.putExtra("Email",user.getEmail());
-                            startActivity(userIntent);
+                            profileIntent.putExtra("Email",user.getEmail());
+                            startActivity(profileIntent);
                             finish();
 
                         } else {
