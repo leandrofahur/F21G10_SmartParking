@@ -45,14 +45,6 @@
 
     </GridView>
 
-    <TextView
-        android:id="@+id/txtViewSelectCategory"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#F9F9F9"
-        android:gravity="center"
-        android:text="@string/txtViewCategory" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,100 +54,15 @@
             android:id="@+id/btnSubmit"
             android:layout_width="274dp"
             android:layout_height="48dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="48dp"
             android:backgroundTint="@color/yellow_500"
             android:gravity="center"
             android:text="@string/btnSubmit"
             android:textColor="#455A64"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:background="#F9F9F9"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:id="@+id/imgBtnCars"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:contentDescription="@string/btnImageCars"
-                app:srcCompat="@drawable/car"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
-
-            <ImageButton
-                android:id="@+id/imgBtnBike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:contentDescription="@string/btnImageBike"
-                app:srcCompat="@drawable/bike"
-                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
-
-            <ImageButton
-                android:id="@+id/imgBtnVan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:contentDescription="@string/btnImageVan"
-                app:srcCompat="@drawable/van"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/txtViewCar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="70dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/txtViewCar"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/txtViewBike"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-        <TextView
-            android:id="@+id/txtViewBike"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/txtViewBike"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/txtViewVan"
-            app:layout_constraintStart_toEndOf="@+id/txtViewCar"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-        <TextView
-            android:id="@+id/txtViewVan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/txtViewVan"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtViewBike"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <Button
             android:id="@+id/backToProfileBtn"
