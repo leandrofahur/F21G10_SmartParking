@@ -2,6 +2,7 @@ package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -75,22 +76,24 @@ public class UserActivity extends AppCompatActivity {
 
         //on click listener, add toast to each image && for cars changing between free and selected
         parkingLotGridView.setOnItemClickListener((AdapterView<?> adapterView, View view, int i, long l) -> {
+            ImageView imageView = (ImageView) view;
 
-            if (StatusList.get(i).getStatusName().equals("Free")) {
-                ImageView imageView = (ImageView) view;
-                imageView.setImageResource(R.drawable.selected);
-            } else {
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putInt("IMGIND", currentPosition);
-                editor.commit();
+            switch (StatusList.get(i).getStatusName()) {
+                case "Free":
+                    StatusList.get(i).setStatusName("Selected");
+                    imageView.setImageResource(R.drawable.selected);
+                    break;
+
+                case "Selected":
+                    StatusList.get(i).setStatusName("Free");
+                    imageView.setImageResource(R.drawable.free);
+                    break;
+
+                default:
+                    break;
             }
 
         });
-
-        //TODO: free-selected only once, if another one is clicked change previous clicked back to free
-
-
 
         //spacing adjustment (top & bottom) - still try to add borders
         GridView gridview = findViewById(R.id.gridViewParkingLot);
