@@ -176,8 +176,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             //Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
 
-                            Bundle myBundle = new Bundle();
-                            profileIntent.putExtra("Email",user.getEmail());
+                            //Bundle myBundle = new Bundle();
+                            //profileIntent.putExtra("Email",user.getEmail());
                             startActivity(profileIntent);
                             finish();
 
