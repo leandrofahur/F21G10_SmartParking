@@ -61,24 +61,6 @@
       </li>      
     </ul>
   </p>
-  <p>
-    <strong><u>Admin</u></strong>
-    <ul>  
-      <li>
-        Admin dashboard
-      </li>
-      <li>
-        Check bookings
-      </li>
-      <li>
-        View user data (E.g., name, car, and license plate)
-      </li>
-      <li>
-        Profit (E.g., daily, weekly and montly)
-      </li>
-    </ul>
-  </p>
-   <p align="center"><img src="./assets/ui-ux.png" width="100%"></p>
 <br/>
 
 <h2>👥 <strong>Contributors</strong></h2>
