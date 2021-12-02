@@ -45,4 +45,8 @@
     <string name="backProfile">BACK TO PROFILE</string>
     <string name="logOutBtn">Logout</string>
     <string name="generateInvoice">Generate Invoice</string>
+    <string name="dateEditText">Date</string>
+    <string name="generateInvoiceBtn">Generate Invoice</string>
+    <string name="checkPermissionsBtn">Check Permissions</string>
+    <string name="hoursOfStayHint">Hours of stay</string>
 </resources>

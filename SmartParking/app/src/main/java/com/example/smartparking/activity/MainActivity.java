@@ -13,10 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-        //startActivity(loginIntent);
-
-        Intent invoiceIntent = new Intent(MainActivity.this, InvoiceActivity.class);
-        startActivity(invoiceIntent);
+        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
     }
 }

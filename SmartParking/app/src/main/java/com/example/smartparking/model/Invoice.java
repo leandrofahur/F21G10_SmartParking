@@ -101,7 +101,6 @@ public class Invoice {
     public void setRate(double rate) {
         this.rate = rate;
     }
-    //TODO: Needs set up with the info that will come from the activity
 
     @NonNull
     public String getEndDate() {
@@ -122,7 +121,7 @@ public class Invoice {
 
     @NonNull
     public Double getTotalCost() {
-        totalCost = rate * duration;
+        totalCost = 1.5 * duration;
         return totalCost;
     }
 

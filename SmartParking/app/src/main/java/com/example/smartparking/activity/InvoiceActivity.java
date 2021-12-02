@@ -24,18 +24,24 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smartparking.R;
+import com.example.smartparking.model.Invoice;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class InvoiceActivity extends AppCompatActivity {
-    EditText editTextTest;
+    EditText editTextDate;
+    TextView txtViewHoursOfStay;
     private Button btnGenerateInvoice;
+    private double duration;
+    private double totalCost;
 
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm a", Locale.CANADA);
 
@@ -45,7 +51,8 @@ public class InvoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice);
 
-        editTextTest = findViewById(R.id.editTextTest);
+        editTextDate = findViewById(R.id.editTextDate);
+        txtViewHoursOfStay = findViewById(R.id.txtViewHoursOfStay);
         btnGenerateInvoice = findViewById(R.id.btnGenerateInvoice);
 
         btnGenerateInvoice.setOnClickListener((View view) -> {
@@ -126,17 +133,50 @@ public class InvoiceActivity extends AppCompatActivity {
         PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(300, 300, 1).create();
         PdfDocument.Page myPage = myInvoice.startPage(pageInfo);
 
-        Paint myPaint = new Paint();
+        duration = Double.parseDouble(txtViewHoursOfStay.getText().toString());
 
-        String myString = editTextTest.getText().toString();
-        myPage.getCanvas().drawText(myString, 10, 25, myPaint);
+        Invoice invoice = new Invoice();
+        invoice.setDuration(duration);
+        totalCost = invoice.getTotalCost();
+
+        Paint paint = new Paint();
+        Paint forLinePaint = new Paint();
+
+        Canvas canvas = myPage.getCanvas();
+
+        paint.setTextSize(15.5f);
+        paint.setColor(Color.YELLOW);
+        canvas.drawText("SMART PARKING", 20, 20, paint);
+
+        paint.setTextSize(8.5f);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("Thanks for using SMART PARKING today!!", 20, 55, paint);
+        canvas.drawText(editTextDate.getText().toString(), 20, 65, paint);
+        canvas.drawText("Length of stay: " + txtViewHoursOfStay.getText().toString() + " hours.", 20, 75, paint);
+
+        canvas.drawText("Payment Break-up", 20, 95, paint);
+        forLinePaint.setStyle(Paint.Style.STROKE);
+        forLinePaint.setPathEffect(new DashPathEffect(new float[]{5,5},0));
+        forLinePaint.setStrokeWidth(2);
+        canvas.drawLine(20, 105, 230, 105, forLinePaint);
+
+        canvas.drawText("Total: $" + String.format("%,.2f", totalCost), 20, 115, paint);
+        //TODO: Fix String.format for currency
+        canvas.drawLine(20, 125, 230, 125, forLinePaint);
+
+        //canvas.drawText(String.valueOf(decimalFormat.format(totalCost)), 230, 105, paint);
+
+        paint.setTextAlign(Paint.Align.LEFT);
+        canvas.drawText("Best Regards,", 20, 140, paint);
+        canvas.drawText("SMART PARKING TEAM", 20, 150, paint);
+
         myInvoice.finishPage(myPage);
 
         String myFilePath = Environment.getExternalStorageDirectory().getPath() + "/Invoice.pdf";
-        File invoice = new File(myFilePath);
+        File invoicePDF = new File(myFilePath);
 
         try{
-            myInvoice.writeTo(new FileOutputStream(invoice));
+            myInvoice.writeTo(new FileOutputStream(invoicePDF));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
