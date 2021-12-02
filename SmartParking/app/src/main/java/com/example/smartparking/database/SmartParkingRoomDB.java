@@ -10,17 +10,20 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.smartparking.dao.InvoiceDAO;
 import com.example.smartparking.dao.UserDAO;
+import com.example.smartparking.dao.VehicleDAO;
 import com.example.smartparking.model.Invoice;
 import com.example.smartparking.model.User;
+import com.example.smartparking.model.Vehicle;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {User.class, Invoice.class}, version = 1, exportSchema = false)
+@Database(entities = {User.class, Invoice.class, Vehicle.class}, version = 1, exportSchema = false)
 public abstract class SmartParkingRoomDB extends RoomDatabase {
     // insert the dao's:
     public abstract UserDAO userDAO();
     public abstract InvoiceDAO invoiceDAO();
+    public abstract VehicleDAO vehicleDAO();
 
     /*
      * Singleton Pattern:
@@ -60,6 +63,9 @@ public abstract class SmartParkingRoomDB extends RoomDatabase {
                 InvoiceDAO invoiceDAO = INSTANCE.invoiceDAO();
                 invoiceDAO.deleteAllInvoices();
 
+                VehicleDAO vehicleDAO = INSTANCE.vehicleDAO();
+                vehicleDAO.deleteAllVehicles();
+
                 // insert a default user:
                 User user = new User("douglas@college.ca","123");
                 userDAO.insertUser(user);
@@ -67,6 +73,10 @@ public abstract class SmartParkingRoomDB extends RoomDatabase {
                 // insert dummy invoice:
                 Invoice invoice = new Invoice("Test invoice", 1, "Mon Nov 29 08:52:30 2021", "Mon Nov 29 09:52:30 2021");
                 invoiceDAO.insertInvoice(invoice);
+
+                // insert dummy vehicle:
+                Vehicle vehicle = new Vehicle("V3A 7M5", "Ford", "Focus", "Pink", 1);
+                vehicleDAO.insertVehicle(vehicle);
             });
         }
     };

@@ -2,6 +2,7 @@ package com.example.smartparking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -22,6 +23,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.net.ssl.SSLEngineResult;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -86,6 +89,16 @@ public class UserActivity extends AppCompatActivity {
         gridview.setHorizontalSpacing(20);
 
         submitBtn.setOnClickListener(view -> {});
+
+        backToProfileBtn.setOnClickListener(view -> {
+            Intent profileIntent = new Intent(UserActivity.this, ProfileActivity.class);
+
+            //Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
+
+            profileIntent.putExtra("Email",userNameTextView.getText().toString());
+            startActivity(profileIntent);
+            finish();
+        });
     }
 
     private void AddDataList() {
@@ -99,5 +112,6 @@ public class UserActivity extends AppCompatActivity {
         StatusList.add(new ClientStatusImage(8, "Free", R.drawable.free));
         StatusList.add(new ClientStatusImage(9, "Free", R.drawable.free));
         StatusList.add(new ClientStatusImage(10, "ParkedCar", R.drawable.parkedcarsidetwo));
+        StatusList.add(new ClientStatusImage(11, "ParkingLines", R.drawable.parkinglines));
     }
 }
