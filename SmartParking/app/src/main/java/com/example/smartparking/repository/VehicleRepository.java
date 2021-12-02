@@ -14,6 +14,7 @@ public class VehicleRepository {
     private VehicleDAO vehicleDAO;
     private LiveData<List<Vehicle>> listLiveData;
     private Vehicle vehicle;
+    private List<Vehicle> vehicleList;
 
     public VehicleRepository(Application application) {
         SmartParkingRoomDB db = SmartParkingRoomDB.getDatabase(application);
@@ -29,8 +30,14 @@ public class VehicleRepository {
         SmartParkingRoomDB.databaseWriteExecutor.execute(() -> vehicleDAO.insertVehicle(vehicle));
     }
 
+
     public Vehicle getVehicle (Integer vehicleId) {
-        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> vehicle = vehicleDAO.getInvoice(vehicleId));
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> vehicle = vehicleDAO.getVehicle(vehicleId));
         return vehicle;
+    }
+
+    public List<Vehicle> getVehicleByUserId (Integer userId) {
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> vehicleList = vehicleDAO.getVehicleByUserId(userId));
+        return vehicleList;
     }
 }

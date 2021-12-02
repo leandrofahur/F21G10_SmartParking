@@ -17,7 +17,10 @@ public interface VehicleDAO {
     LiveData<List<Vehicle>> getAllVehicles();
 
     @Query("SELECT * FROM vehicles WHERE vehicleid=:vehicleid")
-    Vehicle getInvoice(int vehicleid);
+    Vehicle getVehicle(int vehicleid);
+
+    @Query("SELECT * FROM vehicles WHERE userid=:userid")
+    List<Vehicle> getVehicleByUserId(int userid);
 
     @Query("DELETE FROM vehicles")
     void deleteAllVehicles();

@@ -11,12 +11,12 @@ import com.example.smartparking.repository.VehicleRepository;
 
 import java.util.List;
 
-public class vehicleViewModel extends AndroidViewModel {
+public class VehicleViewModel extends AndroidViewModel {
     public static VehicleRepository vehicleRepository;
     public final LiveData<List<Vehicle>> getAllVehicles;
     public Vehicle getVehicle;
 
-    public vehicleViewModel(@NonNull Application application) {
+    public VehicleViewModel(@NonNull Application application) {
         super(application);
         vehicleRepository = new VehicleRepository(application);
         getAllVehicles = vehicleRepository.getAllData();
@@ -29,4 +29,6 @@ public class vehicleViewModel extends AndroidViewModel {
     public static void insertVehicle(Vehicle vehicle) { vehicleRepository.insert(vehicle);}
 
     public static Vehicle getVehicle(int vehicleId) { return vehicleRepository.getVehicle(vehicleId);}
+
+    public List<Vehicle> getVehicleByUserId(int userid){ return vehicleRepository.getVehicleByUserId(userid) ;}
 }

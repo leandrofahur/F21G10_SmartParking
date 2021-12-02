@@ -2,6 +2,7 @@ package com.example.smartparking.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
@@ -34,6 +35,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -95,9 +97,9 @@ public class LoginActivity extends AppCompatActivity {
                 User user = userViewModel.getUser(email, password);
                     if(user != null) {
                         if(email.equals(user.getEmail()) && password.equals(user.getPassword())) {
-                            Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
-                            userIntent.putExtra("Email",user.getEmail());
-                            startActivity(userIntent);
+                            Intent profileIntent = new Intent(LoginActivity.this, ProfileActivity.class);
+                            profileIntent.putExtra("Email",user.getEmail());
+                            startActivity(profileIntent);
                             finish();
                         } else {
                             Toast.makeText(this, "User not registered or Invalid credentials", Toast.LENGTH_SHORT).show();
@@ -172,12 +174,16 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
 
+                            //if(UserViewModel.getUserByEmail(user.getEmail()) == null) {
+                                UserViewModel.insertUser(new User(user.getEmail(), user.getIdToken(true).toString()));
+                            //}
+
                             Intent profileIntent = new Intent(LoginActivity.this, ProfileActivity.class);
 
                             //Toast.makeText(LoginActivity.this, user.getDisplayName(), Toast.LENGTH_SHORT).show();
 
-                            //Bundle myBundle = new Bundle();
-                            //profileIntent.putExtra("Email",user.getEmail());
+                            Bundle myBundle = new Bundle();
+                            profileIntent.putExtra("Email",user.getEmail());
                             startActivity(profileIntent);
                             finish();
 

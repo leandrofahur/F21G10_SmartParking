@@ -76,6 +76,7 @@ public abstract class SmartParkingRoomDB extends RoomDatabase {
 
                 // insert dummy vehicle:
                 Vehicle vehicle = new Vehicle("V3A 7M5", "Ford", "Focus", "Pink", 1);
+                vehicleDAO.insertVehicle(vehicle);
             });
         }
     };

@@ -14,7 +14,7 @@ import java.util.List;
 public class UserViewModel extends AndroidViewModel {
     public static UserRepository userRepository;
     public final LiveData<List<User>> getAllUsers;
-    public User getUser;
+    public User user;
 
     public UserViewModel(@NonNull Application application) {
         super(application);
@@ -29,4 +29,10 @@ public class UserViewModel extends AndroidViewModel {
     public static void insertUser(User user) { userRepository.insert(user);}
 
     public static User getUser(String email, String password) { return userRepository.getUser(email, password);}
+
+    public static User getUserByEmail(String email) { return userRepository.getUserByEmail(email);}
+
+    public static void deleteUserByEmail(String email) { userRepository.deleteUserByEmail(email);}
+
+    public static void deleteAllUsers() { userRepository.deleteAllUsers();}
 }

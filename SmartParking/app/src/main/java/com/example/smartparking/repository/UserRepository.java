@@ -42,4 +42,23 @@ public class UserRepository {
         });
         return user;
     }
+
+    public User getUserByEmail(String email) {
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> {
+            user = userDAO.getUserByEmail(email);
+        });
+        return user;
+    }
+
+    public void deleteUserByEmail(String email) {
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> {
+            userDAO.deleteUserByEmail(email);
+        });
+    }
+
+    public void deleteAllUsers() {
+        SmartParkingRoomDB.databaseWriteExecutor.execute(() -> {
+            userDAO.deleteAllUsers();
+        });
+    }
 }

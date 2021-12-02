@@ -44,5 +44,6 @@
     <string name="backBtn">Back</string>
     <string name="backProfile">BACK TO PROFILE</string>
     <string name="logOutBtn">Logout</string>
+    <string name="textViewEmail">Email</string>
 
 </resources>
