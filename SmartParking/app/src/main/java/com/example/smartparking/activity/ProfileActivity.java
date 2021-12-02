@@ -66,15 +66,13 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        vehicleViewModel.getAllVehicle().observe(this, vehicles -> {
+        vehicleViewModel.getAllVehicles().observe(this, vehicles -> {
             for(Vehicle vehicle: vehicles) {
-                vehicleList.add(vehicle);
+                if(usrId == vehicle.getUserId()) {
+                    vehicleList.add(vehicle);
+                }
             }
         });
-
-        if(vehicleList.size() == 0) {
-            vehicleList2.add(new Vehicle("License Plate", "Model", "Make", "Colour", usrId));
-        }
 
         AddVehicleAdapter vehicleAdapter = new AddVehicleAdapter(vehicleList);
         listViewMyVehicles.setAdapter(vehicleAdapter);

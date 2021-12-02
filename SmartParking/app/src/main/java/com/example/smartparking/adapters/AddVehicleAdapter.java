@@ -47,16 +47,16 @@ public class AddVehicleAdapter extends BaseAdapter {
         TextView textViewColour = convertView.findViewById(R.id.textViewColour);
 
         textViewLicensePlate.setText(listVehicle.get(position).getLicensePlate());
-        textViewLicensePlate.setTextColor(Color.GRAY);
+        textViewLicensePlate.setTextColor(Color.BLACK);
 
         textViewModel.setText(listVehicle.get(position).getModel());
-        textViewModel.setTextColor(Color.GRAY);
+        textViewModel.setTextColor(Color.BLACK);
 
         textViewMake.setText(listVehicle.get(position).getMake());
-        textViewMake.setTextColor(Color.GRAY);
+        textViewMake.setTextColor(Color.BLACK);
 
         textViewColour.setText(listVehicle.get(position).getColor());
-        textViewColour.setTextColor(Color.GRAY);
+        textViewColour.setTextColor(Color.BLACK);
 
         return convertView;
     }

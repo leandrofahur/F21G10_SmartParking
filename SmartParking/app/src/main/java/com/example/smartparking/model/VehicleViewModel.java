@@ -22,7 +22,7 @@ public class VehicleViewModel extends AndroidViewModel {
         getAllVehicles = vehicleRepository.getAllData();
     }
 
-    public LiveData<List<Vehicle>> getAllVehicle() {
+    public LiveData<List<Vehicle>> getAllVehicles() {
         return getAllVehicles;
     }
 
