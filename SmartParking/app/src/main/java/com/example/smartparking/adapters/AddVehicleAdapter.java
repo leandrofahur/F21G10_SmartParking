@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddVehicleAdapter extends BaseAdapter {
-    List<Vehicle> listVehicle = new ArrayList<>();
+    List<Vehicle> listVehicle;
 
     public AddVehicleAdapter(List<Vehicle> listVehicle) {
         this.listVehicle = listVehicle;

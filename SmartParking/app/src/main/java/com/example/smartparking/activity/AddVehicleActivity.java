@@ -83,6 +83,7 @@ public class AddVehicleActivity extends AppCompatActivity {
                         profileIntent.putExtra("Email",email);
                         startActivity(profileIntent);
                         finish();
+                        break;
                     } else{
                         //Toast.makeText(this, "Problem with user from db", Toast.LENGTH_SHORT).show();
                     }
