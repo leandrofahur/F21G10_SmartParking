@@ -8,7 +8,12 @@
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/henri/Desktop/3175/F21G10_SmartParking/SmartParking/app/src/main/res/layout/activity_user.xml" value="0.36666666666666664" />
+<<<<<<< HEAD
+        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/layout_addvehicle.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/maari/Desktop/F21G10_SmartParking/SmartParking/app/src/main/res/layout/layout_invoice.xml" value="0.19429347826086957" />
+=======
         <entry key="app/src/main/res/layout/activity_add_vehicle.xml" value="0.23020833333333332" />
+>>>>>>> e2f3ace6d664639d1461ac62abcb7751ec139fe9
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.18795289855072464" />
