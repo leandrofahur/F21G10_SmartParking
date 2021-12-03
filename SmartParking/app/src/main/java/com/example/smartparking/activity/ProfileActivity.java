@@ -77,7 +77,6 @@ public class ProfileActivity extends AppCompatActivity {
         AddVehicleAdapter vehicleAdapter = new AddVehicleAdapter(vehicleList);
         listViewMyVehicles.setAdapter(vehicleAdapter);
 
-
         addVehicleBtn = findViewById(R.id.addVehicleBtn);
 
         addVehicleBtn.setOnClickListener(view -> {

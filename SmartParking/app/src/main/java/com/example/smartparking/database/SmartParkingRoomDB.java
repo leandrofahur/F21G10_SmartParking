@@ -70,12 +70,21 @@ public abstract class SmartParkingRoomDB extends RoomDatabase {
                 User user = new User("douglas@college.ca","123");
                 userDAO.insertUser(user);
 
-                // insert dummy invoice:
+                // insert dummy invoices:
                 Invoice invoice = new Invoice("Test invoice", 1, "Mon Nov 29 08:52:30 2021", "Mon Nov 29 09:52:30 2021");
                 invoiceDAO.insertInvoice(invoice);
 
-                // insert dummy vehicle:
+                Invoice invoice2 = new Invoice("Test invoice2", 1, "Wed Dec 01 10:26:30 2021", "Wed Dec 01 10:32:30 2021");
+                invoiceDAO.insertInvoice(invoice);
+
+                // insert dummy vehicles:
                 Vehicle vehicle = new Vehicle("V3A 7M5", "Ford", "Focus", "Pink", 1);
+                vehicleDAO.insertVehicle(vehicle);
+
+                Vehicle vehicle1 = new Vehicle("V3T 0K6", "Honda", "Accord", "Black", 1);
+                vehicleDAO.insertVehicle(vehicle);
+
+                Vehicle vehicle2 = new Vehicle("V3T 1V4", "BMW", "i5", "Navy", 1);
                 vehicleDAO.insertVehicle(vehicle);
             });
         }

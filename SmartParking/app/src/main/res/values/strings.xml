@@ -50,4 +50,5 @@
     <string name="checkPermissionsBtn">Check Permissions</string>
     <string name="hoursOfStayHint">Hours of stay</string>
     <string name="textViewEmail">Email</string>
+    <string name="dateEditTxtHint">Date (YYYY-mm-DD)</string>
 </resources>

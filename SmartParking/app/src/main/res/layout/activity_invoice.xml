@@ -15,7 +15,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="@string/dateEditText"
+        android:hint="@string/dateEditTxtHint"
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"

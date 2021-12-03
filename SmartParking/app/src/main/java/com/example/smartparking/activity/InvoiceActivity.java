@@ -182,5 +182,11 @@ public class InvoiceActivity extends AppCompatActivity {
         }
 
         myInvoice.close();
+
+        Toast.makeText(this, "Invoice.pdf downloaded to Files", Toast.LENGTH_SHORT).show();
+
+        Intent profileIntent = new Intent(InvoiceActivity.this, ProfileActivity.class);
+        startActivity(profileIntent);
+        finish();
     }
 }

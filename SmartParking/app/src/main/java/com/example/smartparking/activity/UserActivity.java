@@ -88,7 +88,10 @@ public class UserActivity extends AppCompatActivity {
         gridview.setVerticalSpacing(60);
         gridview.setHorizontalSpacing(20);
 
-        submitBtn.setOnClickListener(view -> {});
+        submitBtn.setOnClickListener(view -> {
+            Intent invoiceIntent = new Intent(UserActivity.this, InvoiceActivity.class);
+            startActivity(invoiceIntent);
+        });
 
         backToProfileBtn.setOnClickListener(view -> {
             Intent profileIntent = new Intent(UserActivity.this, ProfileActivity.class);
