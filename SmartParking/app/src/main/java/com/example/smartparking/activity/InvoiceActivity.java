@@ -42,6 +42,7 @@ public class InvoiceActivity extends AppCompatActivity {
     private Button btnGenerateInvoice;
     private double duration;
     private double totalCost;
+    private String email;
 
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm a", Locale.CANADA);
 
@@ -54,6 +55,8 @@ public class InvoiceActivity extends AppCompatActivity {
         editTextDate = findViewById(R.id.editTextDate);
         txtViewHoursOfStay = findViewById(R.id.txtViewHoursOfStay);
         btnGenerateInvoice = findViewById(R.id.btnGenerateInvoice);
+
+        email = getIntent().getExtras().getString("Email");
 
         btnGenerateInvoice.setOnClickListener((View view) -> {
             generatePDF();
@@ -185,7 +188,8 @@ public class InvoiceActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Invoice.pdf downloaded to Files", Toast.LENGTH_SHORT).show();
 
-        Intent profileIntent = new Intent(InvoiceActivity.this, ProfileActivity.class);
+        Intent profileIntent = new Intent(InvoiceActivity.this, UserActivity.class);
+        profileIntent.putExtra("Email", email);
         startActivity(profileIntent);
         finish();
     }

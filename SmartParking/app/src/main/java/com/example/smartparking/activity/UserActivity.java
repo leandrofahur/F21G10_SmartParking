@@ -90,6 +90,7 @@ public class UserActivity extends AppCompatActivity {
 
         submitBtn.setOnClickListener(view -> {
             Intent invoiceIntent = new Intent(UserActivity.this, InvoiceActivity.class);
+            invoiceIntent.putExtra("Email",userNameTextView.getText().toString());
             startActivity(invoiceIntent);
         });
 
