@@ -49,7 +49,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         // get the email form the user:
         email = getIntent().getExtras().getString("Email");
-        Toast.makeText(this,email, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,email, Toast.LENGTH_SHORT).show();
 
         listViewMyVehicles = findViewById(R.id.listViewMyVehicles);
 
